@@ -88,7 +88,7 @@ def checkTidy (digitList):
     return tidy
 
 # PATH TO EXAMPLES, HARDCODED
-#path = "C:\samples\B-large-practice.in"
+#path = "C:\Input Files\Tidy Numbers\B-large-practice.in"
 #mode = "r"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE

@@ -76,7 +76,7 @@ def returnDictionary (string):
     return {'row': row, 'k': k}
 
 # PATH TO EXAMPLES, HARDCODED
-#path = "C:\samples\A-large-practice.in"
+#path = "C:\Input Files\Pancake Flipper\A-large-practice.in"
 #mode = "r"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE

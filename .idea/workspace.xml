@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="925f6e95-ccf2-4572-9194-52b1651cf4a6" name="Default" comment="" />
+    <list default="true" id="925f6e95-ccf2-4572-9194-52b1651cf4a6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/Input Files/Pancake Flipper/A-large-practice.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/Input Files/Pancake Flipper/A-small-practice.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/Input Files/Tidy Numbers/B-large-practice.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/Input Files/Tidy Numbers/B-small-practice.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PancakeFlipper.py" afterPath="$PROJECT_DIR$/2017/PancakeFlipper.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TidyNumbers.py" afterPath="$PROJECT_DIR$/2017/TidyNumbers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,26 +21,27 @@
     <SUITE FILE_PATH="coverage/Google_Code_Jam$culo.coverage" NAME="culo Coverage Results" MODIFIED="1507832545135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Google_Code_Jam$ProblemA.coverage" NAME="ProblemA Coverage Results" MODIFIED="1506780235237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Google_Code_Jam$PancakeFlipper.coverage" NAME="PancakeFlipper Coverage Results" MODIFIED="1507833043644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Google_Code_Jam$TidyNumbers__1_.coverage" NAME="TidyNumbers (1) Coverage Results" MODIFIED="1507912732955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2017" />
     <SUITE FILE_PATH="coverage/Google_Code_Jam$ProblemB.coverage" NAME="ProblemB Coverage Results" MODIFIED="1506801434780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Google_Code_Jam$TidyNumbers.coverage" NAME="TidyNumbers Coverage Results" MODIFIED="1506892180565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="PancakeFlipper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+        <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2790">
-              <caret line="90" column="33" lean-forward="false" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+            <state relative-caret-position="-630">
+              <caret line="77" column="29" lean-forward="true" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TidyNumbers.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+        <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="186">
+              <caret line="90" column="9" lean-forward="false" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -74,6 +83,8 @@
         <option value="$PROJECT_DIR$/culo.py" />
         <option value="$PROJECT_DIR$/TidyNumbers.py" />
         <option value="$PROJECT_DIR$/PancakeFlipper.py" />
+        <option value="$PROJECT_DIR$/2017/TidyNumbers.py" />
+        <option value="$PROJECT_DIR$/2017/PancakeFlipper.py" />
       </list>
     </option>
   </component>
@@ -90,7 +101,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="-4" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -118,6 +129,11 @@
               <item name="Google Code Jam" type="b2602c69:ProjectViewProjectNode" />
               <item name="Google Code Jam" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Google Code Jam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Google Code Jam" type="462c0819:PsiDirectoryNode" />
+              <item name="2017" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -131,6 +147,13 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\2017\Input\Tidy Numbers" />
+      <recent name="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\2017\Input\Pancake Flipper" />
+      <recent name="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\2017" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -143,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PancakeFlipper">
+  <component name="RunManager" selected="Python.TidyNumbers (1)">
     <configuration name="PancakeFlipper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,25 +180,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Google Code Jam" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PancakeFlipper.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="ProblemA" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Google Code Jam" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\PancakeFlipper.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\2017\PancakeFlipper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,7 +198,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Google Code Jam" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\TidyNumbers.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\2017\TidyNumbers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="TidyNumbers (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2017" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Google Code Jam" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/TidyNumbers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,7 +234,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Google Code Jam" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TidyNumbers.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mauro\Dropbox\My_Files\Python Projects\Google Code Jam\2017\TidyNumbers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,19 +258,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ProblemA" />
-      <item index="1" class="java.lang.String" itemvalue="Python.ProblemB" />
-      <item index="2" class="java.lang.String" itemvalue="Python.PancakeFlipper" />
-      <item index="3" class="java.lang.String" itemvalue="Python.TidyNumbers" />
-      <item index="4" class="java.lang.String" itemvalue="Python.culo" />
+      <item index="0" class="java.lang.String" itemvalue="Python.ProblemB" />
+      <item index="1" class="java.lang.String" itemvalue="Python.PancakeFlipper" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TidyNumbers" />
+      <item index="3" class="java.lang.String" itemvalue="Python.culo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TidyNumbers (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.PancakeFlipper" />
-        <item index="1" class="java.lang.String" itemvalue="Python.culo" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TidyNumbers" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ProblemB" />
-        <item index="4" class="java.lang.String" itemvalue="Python.ProblemA" />
+        <item index="0" class="java.lang.String" itemvalue="Python.TidyNumbers (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.PancakeFlipper" />
+        <item index="2" class="java.lang.String" itemvalue="Python.culo" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TidyNumbers" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ProblemB" />
       </list>
     </recent_temporary>
   </component>
@@ -265,14 +288,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18874869" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18697916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18550107" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17142858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -302,7 +324,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2790">
           <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
@@ -310,7 +332,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+    <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2883">
           <caret line="93" column="40" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
@@ -318,7 +340,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -326,7 +348,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+    <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
@@ -334,7 +356,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -342,7 +364,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+    <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
@@ -350,7 +372,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2232">
           <caret line="72" column="26" lean-forward="true" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
@@ -358,7 +380,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+    <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
@@ -366,7 +388,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -374,7 +396,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+    <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2250">
           <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
@@ -382,7 +404,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="48" />
@@ -390,7 +412,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+    <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
@@ -398,7 +420,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -406,7 +428,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -418,18 +440,34 @@
     <entry file="file://$PROJECT_DIR$/dggsg.py" />
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/culo.py" />
-    <entry file="file://$PROJECT_DIR$/PancakeFlipper.py">
+    <entry file="file://$PROJECT_DIR$/2017/Input Files/Tidy Numbers/B-large-practice.in">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="90" column="33" lean-forward="false" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TidyNumbers.py">
+    <entry file="file://$PROJECT_DIR$/2017/Input Files/Pancake Flipper/A-small-practice.in">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/PancakeFlipper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="77" column="29" lean-forward="true" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/TidyNumbers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="90" column="9" lean-forward="false" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="24" />
           <folding />
         </state>
       </provider>
