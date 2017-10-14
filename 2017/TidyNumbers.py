@@ -1,13 +1,13 @@
 # Google Code Jam 
 # TidyNumbers.py
-# Created by Mauro J. Pappaterra & Hassan Odimi on 30 of September 2017.
+# Created by Mauro J. Pappaterra on 30 of September 2017.
 
 from pathlib import Path
 
 def tidyNumbers (number):
-    "Takes a number (as a string) and returns the last tidy number counted"
-    'e.g. "12645" => "12599"'
-    'e.g. "345" => "345"'
+    '''Takes a number (as a string) and returns the last tidy number counted
+    e.g. "12645" => "12599"
+    e.g. "345" => "345"'''
     listOfDigits = convertToDigitList(number)
     #FOR TESTING PURPOSES
     #print(listOfDigits)
@@ -23,9 +23,9 @@ def tidyNumbers (number):
     return convertToString(lastTidy) # returns result as a string
 
 def findLastTidy (listOfDigits):
-    "This recursive algorithm takes a number as a list of digits"
-    "and returns the last tidy number as a list of digits"
-    'e.g. [9,8,7,6] => [8,9,9,9]'
+    """This recursive algorithm takes a number as a list of digits
+    and returns the last tidy number as a list of digits
+    e.g. [9,8,7,6] => [8,9,9,9]"""
     noDigits = len(listOfDigits)  # number of digits
     noLoops = noDigits - 1  # number of loop iterations
 
@@ -47,8 +47,8 @@ def findLastTidy (listOfDigits):
     return listOfDigits;
 
 def convertToDigitList (numberAsString):
-    "Takes a single number as a string, returns a list of integers for each digit"
-    "e.g. '12345' => [1,2,3,4,5]"
+    """Takes a single number as a string, returns a list of integers for each digit
+    e.g. '12345' => [1,2,3,4,5]"""
     digitList = list(str(numberAsString))  # converts string into a list of char
     del digitList[-1]  # deletes last char on list that is always '\n'
 
@@ -57,8 +57,8 @@ def convertToDigitList (numberAsString):
     return digitList
 
 def convertToString (digitList):
-    "Takes a list of digits and returns its concatenation as a single string"
-    'e.g. [1,2,3,4,5] => "12345"'
+    '''Takes a list of digits and returns its concatenation as a single string
+    e.g. [1,2,3,4,5] => "12345"'''
     for index, digit in enumerate(digitList):
         digitList[index] = str(digit)
 
@@ -66,15 +66,15 @@ def convertToString (digitList):
     return asString
 
 def convertToInteger (digitList):
-    "Takes a list of digits and returns its concatenation as a single integer"
-    "e.g. [1,9,9,8] => 1998"
+    """Takes a list of digits and returns its concatenation as a single integer
+    e.g. [1,9,9,8] => 1998"""
     asInteger = int(convertToString(digitList))
     return asInteger
 
 def checkTidy (digitList):
-    "Takes list of integers returns True if the numbers are 'tidy'"
-    "e.g. 123456 => True"
-    "e.g. 912345 => False"
+    """Takes list of integers returns True if the numbers are 'tidy'
+    e.g. 123456 => True
+    e.g. 912345 => False"""
     tidy = True
     noDigits = len(digitList) # number of digits
     noLoops = noDigits - 1 # number of loop iterations

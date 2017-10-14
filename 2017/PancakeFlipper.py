@@ -5,12 +5,12 @@
 from pathlib import Path
 
 def pancakeFlipper(row, k):
-    "Receives a row of pancakes as a string and a number of simultaneous flips k"
-    "returns a string with the number of flips to have all pancakes smiley"
-    "side up or a message if there is on solution "
-    "e.g. '---+-++-' 3 => 3"
-    "e.g. '+++++' 4 => 0"
-    "e.g. '-+-+-' 4 => IMPOSSIBLE"
+    """Receives a row of pancakes as a string and a number of simultaneous flips k
+    returns a string with the number of flips to have all pancakes smiley
+    side up or a message if there is on solution
+    e.g. '---+-++-' 3 => 3
+    e.g. '+++++' 4 => 0
+    e.g. '-+-+-' 4 => IMPOSSIBLE"""
     length = len (row)
     endList = length - k
     flips = 0;
@@ -111,6 +111,3 @@ del samples[0] # deletes the first line of the file, leaving only the samples
 
 for i, sample in enumerate (samples):
     print("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i])))
-
-
-
