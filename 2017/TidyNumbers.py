@@ -87,19 +87,18 @@ def checkTidy (digitList):
             noLoops -= 1
     return tidy
 
-# PATH TO EXAMPLES, HARDCODED
-#path = "C:\Input Files\Tidy Numbers\B-large-practice.in"
-#mode = "r"
+#PATH TO EXAMPLES, HARDCODED
+path = "Input\Tidy Numbers\B-large-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
-path = input("Enter path to file containing examples: ")
-path = Path(path)
+#path = input("Enter path to file containing examples: ")
+#path = Path(path)
+#
+#while (not path.is_file()):
+#    path = input("\nERROR: NOT A VALID FILE PATH! \nEnter path to file containing examples: ")
+#    path = Path(path)
 
 mode = "r"
-while (not path.is_file()):
-    path = input("\nERROR: NOT A VALID FILE PATH! \nEnter path to file containing examples: ")
-    path = Path(path)
-
 with open (path, mode) as reader:
     samples = (reader.readlines())
     reader.close()
