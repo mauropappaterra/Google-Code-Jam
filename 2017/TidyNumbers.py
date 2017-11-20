@@ -1,7 +1,6 @@
 # Google Code Jam 
 # TidyNumbers.py
 # Created by Mauro J. Pappaterra on 30 of September 2017.
-
 from pathlib import Path
 
 def tidyNumbers (number):
@@ -89,6 +88,7 @@ def checkTidy (digitList):
 
 #PATH TO EXAMPLES, HARDCODED
 path = "Input\Tidy Numbers\B-large-practice.in"
+#path = "Input\Tidy Numbers\B-small-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")

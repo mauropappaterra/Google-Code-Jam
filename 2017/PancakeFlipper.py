@@ -1,7 +1,6 @@
 # Google Code Jam 
 # PancakeFlipper.py
 # Created by Mauro J. Pappaterra & Hassan Odimi on 29 of September 2017.
-
 from pathlib import Path
 
 X = '+'
@@ -80,6 +79,7 @@ def returnDictionary (string):
 
 # PATH TO EXAMPLES, HARDCODED
 path = "Input\Pancake Flipper\A-large-practice.in"
+#path = "Input\Pancake Flipper\A-small-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
@@ -101,6 +101,9 @@ del samples[0] # deletes the first line of the file, leaving only the samples
 #for i, sample in enumerate (samples):
 #      print("Case #" + str(i + 1) + ":" + str(returnDictionary(samples[i])))
 
+for i, sample in enumerate (samples):
+    print("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i])))
+
 #FOR TESTING ONLY
 #test = 62
 #print(samples[test])
@@ -110,6 +113,3 @@ del samples[0] # deletes the first line of the file, leaving only the samples
 #sample1 = {'row':['-','-','-','x','-','x','x','-'], 'k': 3} # ---+-++-
 #sample2 = {'row':['x','x','x','x','x'], 'k': 4} # +++++
 #sample3 = {'row':['-','x','-','x','-'], 'k': 4} # -+-+-
-
-for i, sample in enumerate (samples):
-    print("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i])))
