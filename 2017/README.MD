@@ -125,8 +125,20 @@ is assigned a value True, that will determine if the final string returned by th
 1. Open Python <br>
 2. On the prompt execute: <br>
 &nbsp &nbsp &nbsp <code>> exec(open("<i>path</i>/<i>script</i>.py").read())</code> <br>
-&nbsp &nbsp &nbsp <b>Notice: Replace <i>path</i> with the local path to the folder that contains the script you want to ezecute</b> <br>
+&nbsp &nbsp &nbsp <b>Notice: Replace <i>path</i> with the local path to the folder that contains the script you want to execute</b> <br>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<b>Replace <i>script</i> with the name of the file you want to execute e.g. PancakeFlipper.py</b> <br>
+
+<br>
+<b>All input files are hardcoded, if you want to use your own input files uncomment the following lines in all files:</b>
+<pre>
+# ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
+#path = input("Enter path to file containing examples: ")
+#path = Path (path)
+#
+#while (not path.is_file()):
+#    path = input("\nERROR: NOT A VALID FILE PATH! \nEnter path to file containing examples: ")
+#    path = Path(path)
+</pre>
 
 <br>
 <a href="#top">Back to Top</a> 
