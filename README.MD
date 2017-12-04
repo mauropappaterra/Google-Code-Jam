@@ -1,3 +1,16 @@
+<h1>Google Code Jam</h1>
+
+This is a collection of my solutions to various challenges from <a href="https://code.google.com/codejam/">Google’s Code Jam</a>, the well-known international competition hosted by Google. Most of these challenges include different mathematical and computer science concepts that normally appear in everyday computing problems such as recursion, loops, formatted output, file I/O, data structures, and more. I try to solve as many challenges as possible, and add them all to this repository. All solutions are coded in Python.
+<br><br>
+<b>All challenges are sorted by year of publication. You can find a description of each challenge and solution, as well as instruction to execute the programs on each folder.</b>
+<br>
+
+Jump to folder:<br>
+<!-- <a href="">2016</a><br> -->
+<a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2017">2017</a><br>
+<!-- <a href="">2018</a><br> -->
+<br>
+
 <pre>
  (                        (           (          (                               
  )\ )              (  (   )\   (      )\         )\ )   (      (      )     )    
@@ -45,16 +58,3 @@ _  / __  _  __ \_  __ \__  __ `/__  / _  _ \     _  /     _  __ \_  __  / _  _ \
 \____/   \____/ \____/ _\__, /  /_/   \___/      \____/   \____/ \__,_/   \___/      \____/   \__,_/  /_/ /_/ /_/ 
                        /____/                                                                                                                                                                                                                                                                                                                                             
 </pre>
-
-<h1>Google Code Jam</h1>
-
-This is a collection of my solutions to various challenges from <a href="https://code.google.com/codejam/">Google’s Code Jam</a>, the well-known international competition hosted by Google. Most of these challenges include different mathematical and computer science concepts that normally appear in everyday computing problems such as recursion, loops, formatted output, file I/O, data structures, and more. I try to solve as many challenges as possible, and add them all to this repository. All solutions are coded in Python.
-<br><br>
-<b>All challenges are sorted by year of publication. You can find a description of each challenge and solution, as well as instruction to execute the programs on each folder.</b>
-<br>
-
-Jump to folder:<br>
-<!-- <a href="">2016</a><br> -->
-<a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2017">2017</a><br>
-<!-- <a href="">2018</a><br> -->
-<br>
