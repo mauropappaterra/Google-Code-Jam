@@ -1,14 +1,14 @@
 <pre>
- (                        (           (          (                                   )    )    )      )  
- )\ )              (  (   )\   (      )\         )\ )   (      (      )     )     ( /( ( /( ( /(   ( /(  
-(()/(     (    (   )\))( ((_) ))\   (((_)   (   (()/(  ))\     )\  ( /(    (      )(_)))\()))\())  )\()) 
- /(_))_   )\   )\ ((_))\  _  /((_)  )\___   )\   ((_))/((_)   ((_) )(_))   )\  ' ((_) ((_)\((_)\  ((_)\  
-(_)) __| ((_) ((_) (()(_)| |(_))   ((/ __| ((_)  _| |(_))    _ | |((_)_  _((_))  |_  )/  (_)/ (_)|__  /  
-  | (_ |/ _ \/ _ \/ _` | | |/ -_)   | (__ / _ \/ _` |/ -_)  | || |/ _` || '  \()  / /| () | | |    / /   
-   \___|\___/\___/\__, | |_|\___|    \___|\___/\__,_|\___|   \__/ \__,_||_|_|_|  /___|\__/  |_|   /_/  
+   ___                  _          ___          _         __                    ____   ___  _ _____ 
+  / _ \___   ___   __ _| | ___    / __\___   __| | ___    \ \  __ _ _ __ ___   |___ \ / _ \/ |___  |
+ / /_\/ _ \ / _ \ / _` | |/ _ \  / /  / _ \ / _` |/ _ \    \ \/ _` | '_ ` _ \    __) | | | | |  / / 
+/ /_\\ (_) | (_) | (_| | |  __/ / /__| (_) | (_| |  __/ /\_/ / (_| | | | | | |  / __/| |_| | | / /  
+\____/\___/ \___/ \__, |_|\___| \____/\___/ \__,_|\___| \___/ \__,_|_| |_| |_| |_____|\___/|_|/_/   
+                  |___/                                                                             
+                                                                                                    
 </pre>
 
-<h1>Google Code Jam 2017</h1>
+<h1 id="top">Google Code Jam 2017</h1>
 List of Solved Challenges<br>
 <a href="#pancake">-Pancake Flipper</a><br>
 <a href="#numbers">-Tidy Numbers</a><br>
@@ -58,6 +58,9 @@ A variable containing the size of the pancake row is used to avoid and index out
 time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
 is assigned a value True, that will determine if the final string returned by the function is the string
 “IMPOSSIBLE” or the counter flips casted as a string.
+<br>
+<br>
+<a href="#top">Back to Top</a> <br>
 
 <br>
 <hr>
@@ -100,7 +103,9 @@ A variable containing the size of the pancake row is used to avoid and index out
 time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
 is assigned a value True, that will determine if the final string returned by the function is the string
 “IMPOSSIBLE” or the counter flips casted as a string.
-
+<br>
+<br>
+<a href="#top">Back to Top</a> <br>
 <br>
 <hr>
 
