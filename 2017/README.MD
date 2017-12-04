@@ -57,7 +57,7 @@ with the following k pancakes if the character equals –, on the right side and
 A variable containing the size of the pancake row is used to avoid and index out of bound error. Every
 time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
 is assigned a value True, that will determine if the final string returned by the function is the string
-“IMPOSSIBLE” or the counter flips casted as a string.<a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="blank">See the Code.</a> 
+“IMPOSSIBLE” or the counter flips casted as a string.<a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank"> See the Code.</a> 
 <br>
 <br>
 <a href="#top">Back to Top</a> 
@@ -101,7 +101,7 @@ with the following k pancakes if the character equals –, on the right side and
 A variable containing the size of the pancake row is used to avoid and index out of bound error. Every
 time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
 is assigned a value True, that will determine if the final string returned by the function is the string
-“IMPOSSIBLE” or the counter flips casted as a string.<a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="blank">See the Code.</a>
+“IMPOSSIBLE” or the counter flips casted as a string.<a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank"> See the Code.</a>
 <br>
 <br>
 <a href="#top">Back to Top</a> 
