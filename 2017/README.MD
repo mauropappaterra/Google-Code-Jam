@@ -141,7 +141,6 @@ All input files are hardcoded, if you want to use your own input files uncomment
 #    path = input("\nERROR: NOT A VALID FILE PATH! \nEnter path to file containing examples: ")
 #    path = Path(path)
 </pre>
-<br>
 For the scripts to work properly all external input files should be formated following Google's Code Jam specifications.
 <br>
 <br>
