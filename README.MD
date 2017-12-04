@@ -63,7 +63,7 @@ This is a collection of my solutions to various challenges from <a href="https:/
 1. Open a terminal <br>
 2. Navigate to the folder where the files are located <br>
 3. On the command line execute: <br>
-&nbsp &nbsp &nbsp <code>> python3 <i>script</i>.py </code> <br> <br>
+&nbsp &nbsp &nbsp <code>> python3 <i>script</i>.py </code> <br>
 &nbsp &nbsp &nbsp <b>Notice: Replace <i>script</i> with the name of the file you want to execute e.g. PancakeFlipper.py</b> <br>
 
 <h5>From the Python interpreter:</h5>
