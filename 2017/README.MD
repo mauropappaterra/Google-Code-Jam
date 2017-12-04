@@ -22,7 +22,7 @@ More <br>
 <h3 id="pancake">Pancake Flipper</h3>
 <i>Script <b>PancakeFlipper.py</b></i>
 
-<h5>The Problem</h5>
+<h4>The Problem</h4>
 The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
 all samples. We saved the first line on the file, that contains the number of samples, in a variable
 no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
@@ -41,7 +41,7 @@ is assigned a value True, that will determine if the final string returned by th
 “IMPOSSIBLE” or the counter flips casted as a string.
 
 
-<h5>My Solution</h5>
+<h4>My Solution</h4>
 The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
 all samples. We saved the first line on the file, that contains the number of samples, in a variable
 no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
@@ -66,7 +66,7 @@ is assigned a value True, that will determine if the final string returned by th
 <h3 id="numbers">Tidy Numbers</h3>
 <i>Script <b>TidyNumbers.py</b></i>
 
-<h5>The Problem</h5>
+<h4>The Problem</h4>
 The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
 all samples. We saved the first line on the file, that contains the number of samples, in a variable
 no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
@@ -85,7 +85,7 @@ is assigned a value True, that will determine if the final string returned by th
 “IMPOSSIBLE” or the counter flips casted as a string.
 
 
-<h5>My Solution</h5>
+<h4>My Solution</h4>
 The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
 all samples. We saved the first line on the file, that contains the number of samples, in a variable
 no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
@@ -114,14 +114,14 @@ is assigned a value True, that will determine if the final string returned by th
 -To execute from the command line on a Ms Windows system you need to <a href="https://docs.python.org/2/using/windows.html">add Python to the PATH environmental variable.</a><br>
 -Do not hesitate to contact me if you have any problems running these programs <br>
 
-<h5>From the command line:</h5>
+<h4>From the command line:</h4>
 1. Open a terminal <br>
 2. Navigate to the folder where the files are located <br>
 3. On the command line execute: <br>
 &nbsp &nbsp &nbsp <code>> python3 <i>script</i>.py </code> <br>
 &nbsp &nbsp &nbsp <b>Notice: Replace <i>script</i> with the name of the file you want to execute e.g. PancakeFlipper.py</b> <br>
 
-<h5>From the Python interpreter:</h5>
+<h4>From the Python interpreter:</h4>
 1. Open Python <br>
 2. On the prompt execute: <br>
 &nbsp &nbsp &nbsp <code>> exec(open("<i>path</i>/<i>script</i>.py").read())</code> <br>
@@ -129,7 +129,8 @@ is assigned a value True, that will determine if the final string returned by th
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<b>Replace <i>script</i> with the name of the file you want to execute e.g. PancakeFlipper.py</b> <br>
 
 <br>
-<b>All input files are hardcoded, if you want to use your own input files uncomment the following lines in all files:</b>
+<h4>To use your own input files:</h4>
+All input files are hardcoded, if you want to use your own input files uncomment the following lines (excluding the first line) in all files:
 <pre>
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
