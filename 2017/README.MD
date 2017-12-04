@@ -1,4 +1,4 @@
-<pre>
+<pre id="top">
    ___                  _          ___          _         __                    ____   ___  _ _____ 
   / _ \___   ___   __ _| | ___    / __\___   __| | ___    \ \  __ _ _ __ ___   |___ \ / _ \/ |___  |
  / /_\/ _ \ / _ \ / _` | |/ _ \  / /  / _ \ / _` |/ _ \    \ \/ _` | '_ ` _ \    __) | | | | |  / / 
@@ -8,7 +8,7 @@
                                                                                                     
 </pre>
 
-<h1 id="top">Google Code Jam 2017</h1>
+<h1>Google Code Jam 2017</h1>
 List of Solved Challenges<br>
 <a href="#pancake">-Pancake Flipper</a><br>
 <a href="#numbers">-Tidy Numbers</a><br>
@@ -62,7 +62,6 @@ is assigned a value True, that will determine if the final string returned by th
 <br>
 <a href="#top">Back to Top</a> <br>
 
-<br>
 <hr>
 <h3 id="numbers">Tidy Numbers</h3>
 <i>Script <b>TidyNumbers.py</b></i>
@@ -106,7 +105,7 @@ is assigned a value True, that will determine if the final string returned by th
 <br>
 <br>
 <a href="#top">Back to Top</a> <br>
-<br>
+
 <hr>
 
 <h3 id="help">Instructions to run the programs</h3>
