@@ -60,8 +60,8 @@ is assigned a value True, that will determine if the final string returned by th
 “IMPOSSIBLE” or the counter flips casted as a string.
 <br>
 <br>
-<a href="#top">Back to Top</a> <br>
-
+<a href="#top">Back to Top</a> 
+<br>
 <hr>
 <h3 id="numbers">Tidy Numbers</h3>
 <i>Script <b>TidyNumbers.py</b></i>
@@ -104,8 +104,8 @@ is assigned a value True, that will determine if the final string returned by th
 “IMPOSSIBLE” or the counter flips casted as a string.
 <br>
 <br>
-<a href="#top">Back to Top</a> <br>
-
+<a href="#top">Back to Top</a> 
+<br>
 <hr>
 
 <h3 id="help">Instructions to run the programs</h3>
@@ -128,3 +128,6 @@ is assigned a value True, that will determine if the final string returned by th
 &nbsp &nbsp &nbsp <b>Notice: Replace <i>path</i> with the local path to the folder that contains the script you want to ezecute</b> <br>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<b>Replace <i>script</i> with the name of the file you want to execute e.g. PancakeFlipper.py</b> <br>
 
+<br>
+<a href="#top">Back to Top</a> 
+<br>
