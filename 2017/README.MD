@@ -9,13 +9,14 @@
 </pre>
 
 <h1>Google Code Jam 2017</h1>
-List of Solved Challenges<br><br>
+List of Solved Challenges<br>
 <a href="#pancake">-Pancake Flipper</a><br>
 <a href="#numbers">-Tidy Numbers</a><br>
 <br>
-<a href="#help">Instructions to run the programs</a>
+<a href="#help">Instructions to run the programs</a> <br>
+<a href="https://github.com/yogurt1989/Google-Code-Jam">Go Back</a>
 
-
+<br>
 <hr>
 <h3 id="pancake">Pancake Flipper</h3>
 <i>Script <b>PancakeFlipper.py</b></i>
