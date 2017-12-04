@@ -13,6 +13,7 @@ List of Solved Challenges<br>
 <a href="#pancake">-Pancake Flipper</a><br>
 <a href="#numbers">-Tidy Numbers</a><br>
 <br>
+More <br>
 <a href="#help">Instructions to run the programs</a> <br>
 <a href="https://github.com/yogurt1989/Google-Code-Jam">Go Back</a>
 
@@ -61,6 +62,8 @@ is assigned a value True, that will determine if the final string returned by th
 <br>
 <hr>
 <h3 id="numbers">Tidy Numbers</h3>
+<i>Script <b>TidyNumbers.py</b></i>
+
 <h5>The Problem</h5>
 The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
 all samples. We saved the first line on the file, that contains the number of samples, in a variable
