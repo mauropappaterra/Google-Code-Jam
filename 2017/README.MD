@@ -12,7 +12,7 @@
 List of Solved Challenges<br>
 <a href="#pancake">-Pancake Flipper</a><br>
 <a href="#numbers">-Tidy Numbers</a><br>
-<a href="potty">-Bathroom Stalls</a><br>
+<a href="#potty">-Bathroom Stalls</a><br>
 
 <br>
 More <br>
