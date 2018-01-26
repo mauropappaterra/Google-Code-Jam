@@ -69,6 +69,8 @@ def bathroomStalls (input):
 
 
 def createStalls(n):
+    """Returns a list with the configuration of the bathroom stalls, both ends
+    are occupied, all in between (n) are empty"""
     stalls = [OCCUPIED,OCCUPIED] # toilets in both ends are always occupied
 
     while (n > 0):
@@ -77,6 +79,7 @@ def createStalls(n):
     return stalls
 
 def calculate_ls (stalls, index):
+    """Calculates the distance to the closest occupied toilet to the left"""
     index -= 1
     ls = 0
 
@@ -89,6 +92,7 @@ def calculate_ls (stalls, index):
     return ls
 
 def calculate_rs(stalls, index):
+    """Calculates the distance to the closest occupied toilet to the right"""
     index += 1
     rs = 0
 
@@ -132,9 +136,9 @@ def return_maximal_max (first_selection, maximum): # for second selection
 
 
 #PATH TO EXAMPLES, HARDCODED
-#path = "Input\Bathroom Stalls\C-large-practice.in"
+path = "Input\Bathroom Stalls\C-large-practice.in"
 #path = "Input\Bathroom Stalls\C-small-practice-2.in"
-path = "Input\Bathroom Stalls\C-small-practice-1.in"
+#path = "Input\Bathroom Stalls\C-small-practice-1.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
