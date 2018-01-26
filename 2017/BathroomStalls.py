@@ -36,6 +36,7 @@ def bathroomStalls (input):
 
                 # FOR TESTING PURPOSES
                 #print("index: " + str(index)+ " Ls: " + str(ls) + " Rs: " + str(rs) + "\t\tmin(Ls,Rs) = " + str(minimum[index]) + "\t\tmax(Ls,Rs) = " + str(maximum[index]))
+
         # FOR TESTING PURPOSES
         #print("\nMINIMUM: " + str(minimum))
         #print("MAXIMUM: " + str(maximum))
