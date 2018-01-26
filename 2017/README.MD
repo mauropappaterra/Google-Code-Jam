@@ -12,6 +12,8 @@
 List of Solved Challenges<br>
 <a href="#pancake">-Pancake Flipper</a><br>
 <a href="#numbers">-Tidy Numbers</a><br>
+<a href="potty">-Bathroom Stalls</a><br>
+
 <br>
 More <br>
 <a href="#help">Instructions to run the programs</a> <br>
@@ -107,6 +109,50 @@ is assigned a value True, that will determine if the final string returned by th
 <a href="#top">Back to Top</a> 
 <br>
 <hr>
+<h3 id="potty">Bathroom Stalls</h3>
+<i>Script <b>BathroomStalls.py</b></i>
+
+<h4>The Problem</h4>
+The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
+all samples. We saved the first line on the file, that contains the number of samples, in a variable
+no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
+file and returns a dictionary containing the row of pancakes as a string and the number of possible
+simultaneous flips (k) as an integer. We call this function to each line of the file as we call our main
+function that solves the pancake flipper problem.
+Our main function pancakeFlipper(row, k) takes a row of pancakes as a string and an integer as k. We
+save the length of the row in a variable length and create a counter flips, that is the returning variable for
+the function. We also create a flag impossible deemed as false that will indicate if the given parameters
+have a solution or not. An auxiliary function flip(char) toggles + for – and – for +. The heart of the
+algorithm are two while statements that will check each character (pancake) on the row and flip it along
+with the following k pancakes if the character equals –, on the right side and on the left side respectively.
+A variable containing the size of the pancake row is used to avoid and index out of bound error. Every
+time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
+is assigned a value True, that will determine if the final string returned by the function is the string
+“IMPOSSIBLE” or the counter flips casted as a string.
+
+
+<h4>My Solution</h4>
+The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
+all samples. We saved the first line on the file, that contains the number of samples, in a variable
+no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
+file and returns a dictionary containing the row of pancakes as a string and the number of possible
+simultaneous flips (k) as an integer. We call this function to each line of the file as we call our main
+function that solves the pancake flipper problem.
+Our main function pancakeFlipper(row, k) takes a row of pancakes as a string and an integer as k. We
+save the length of the row in a variable length and create a counter flips, that is the returning variable for
+the function. We also create a flag impossible deemed as false that will indicate if the given parameters
+have a solution or not. An auxiliary function flip(char) toggles + for – and – for +. The heart of the
+algorithm are two while statements that will check each character (pancake) on the row and flip it along
+with the following k pancakes if the character equals –, on the right side and on the left side respectively.
+A variable containing the size of the pancake row is used to avoid and index out of bound error. Every
+time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
+is assigned a value True, that will determine if the final string returned by the function is the string
+“IMPOSSIBLE” or the counter flips casted as a string. <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank">See the Code.</a>
+<br>
+<br>
+<a href="#top">Back to Top</a> 
+<br>
+<hr>
 
 <h3 id="help">Instructions to run the programs</h3>
 -Clone or download this repository<br>
@@ -127,7 +173,6 @@ is assigned a value True, that will determine if the final string returned by th
 &nbsp &nbsp &nbsp <code>> exec(open("<i>path</i>/<i>script</i>.py").read())</code> <br>
 &nbsp &nbsp &nbsp <b>Notice: Replace <i>path</i> with the local path to the folder that contains the script you want to execute</b> <br>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<b>Replace <i>script</i> with the name of the file you want to execute e.g. PancakeFlipper.py</b> <br>
-
 <br>
 <h4>To use your own input files:</h4>
 All input files are hardcoded, if you want to use your own input files uncomment the following lines (excluding the first line) in all files:
