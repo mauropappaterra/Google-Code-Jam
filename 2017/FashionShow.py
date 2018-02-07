@@ -400,7 +400,7 @@ path = "Input\Fashion Show\D-small-practice.in"
 mode = "r"
 with open (path, mode) as reader:
     samples = (reader.readlines())
-    reader.close()
+    reader.close() 
 
 no_samples = samples[0] # save the first line of the file containing the number of samples
 del samples[0] # deletes the first line of the file, leaving only the samples
