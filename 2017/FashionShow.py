@@ -4,7 +4,7 @@
 from pathlib import Path
 from random import *
 
-def fashionShow (stage_layout):
+def fashionShow (stage_layout): # format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o', 1, 19]]
     """Main algorithm for the fashion show challenge"""
 
     n = stage_layout[0] # store n
@@ -16,25 +16,25 @@ def fashionShow (stage_layout):
     #FOR TESTING PURPOSES
     print ("\nn: " + str (n) + "  \t\tm: " + str (m))
 
-    #if (len(formatted_sample) > 0):
+    #if (m > 0):
     for i,models in enumerate (stage_layout):
         print ("pos. model " + str (i + 1) + " -> " + str(models)) # print all model positions
 
-    stage = getStage(n, stage_layout)
+    stage = getStage(n, stage_layout) # format [['+', '-', '-'], ['+', '-',  '-'], [ '-',  '-', 'o']]
     printStage(stage) # print current stage
 
 
-    matrix = newMatrix(n)
+    matrix = newMatrix(n) # format [[[None, False, True, False], [None, None, None, None], ...]
     updateMatrix(n,stage,matrix)
     printMatrix(matrix) # print outfit matrix
 
-    optimizeStage (n, stage, matrix)
+    #optimizeStage (n, stage, matrix)
 
     return ''
 
 # STAGE RELATED METHODS
 def getStage (n,stage_layout):
-    """Takes a grid of size n x n, a list of m model's position coordenates on the grid (stage layout),
+    """Takes a grid of size n x n, a list of m model's position coordinates on the grid (stage layout),
     and returns stage as a matrix"""
     stage = getEmptyStage(n)
 
@@ -65,7 +65,8 @@ def getEmptyStage (n):
     return emptyStage
 
 def printStage (stage):
-    """Prints the contents of the stage, auxiliary method not part of the solution"""
+    """Prints the contents of the stage on a more readable format. This is an auxiliary method not part of the solution"""
+    #print(stage)
     print("")
     for row in stage:
         print(" ".join(row))
@@ -83,7 +84,7 @@ def newMatrix (n):
         nn = k
         rows = []
         while (nn > 0):
-            rows.append([None,None,None,None]) # booleans for . + x and o respectively
+            rows.append([True,None,None,None]) # booleans for . + x and o respectively
             nn -= 1
         new_matrix.append(rows)
         n -= 1
@@ -247,7 +248,9 @@ def refreshMatrix (matrix, row_index, column_index, style):
     matrix[row_index][column_index][bool] = True
 
 def printMatrix (matrix):
-    """Auxiliary method that print the content of the matrix, not part of the solution"""
+    """Auxiliary method that print the content of the matrix in a more readable format. Not part of the solution"""
+
+    print (matrix)
     printout = '\n'
 
     for rows in matrix:
@@ -298,8 +301,8 @@ def optimizeStage (n, stage, matrix):
         for j,column in enumerate(row):
             #print (column)
             if (column == '-'):
-                print ("optimize that shit")
-                if (matrix[i][j] == [True, False, False, False] or matrix[i][j] == [False, False, False, False]):
+                print ("executing")
+                if (matrix[i][j] == [True, False, False, False]):
 
                     stage[i][j] = '.' # update stage
                     changes += 1 # counter for changes made
@@ -309,7 +312,7 @@ def optimizeStage (n, stage, matrix):
                     printStage(stage)
                     printMatrix(matrix)
 
-                elif (matrix[i][j] == [True, True, False, False] or matrix[i][j] == [False, True, False, False]):
+                elif (matrix[i][j] == [True, True, False, False]):
                     stage[i][j] = '+'
                     changes += 1
 
@@ -318,7 +321,7 @@ def optimizeStage (n, stage, matrix):
                     printStage(stage)
                     printMatrix(matrix)
 
-                elif (matrix[i][j] == [True, False, True, False] or matrix[i][j] == [False, False, True, False]):
+                elif (matrix[i][j] == [True, False, True, False]):
                     stage[i][j] = 'x'
                     changes += 1
 
@@ -327,7 +330,7 @@ def optimizeStage (n, stage, matrix):
                     printStage(stage)
                     printMatrix(matrix)
 
-                elif (matrix[i][j] == [True, False, False, True] or matrix[i][j] == [False, False, False, True]):
+                elif (matrix[i][j] == [True, False, False, True]):
                     stage[i][j] = 'o'
                     changes += 1
 
@@ -336,7 +339,7 @@ def optimizeStage (n, stage, matrix):
                     printStage(stage)
                     printMatrix(matrix)
 
-                elif (matrix[i][j] == [True, True, False, True] or matrix[i][j] == [False, True, False, True]):
+                elif (matrix[i][j] == [True, True, False, True]):
                     stage[i][j] = 'o'
                     changes += 1
 
@@ -345,7 +348,7 @@ def optimizeStage (n, stage, matrix):
                     printStage(stage)
                     printMatrix(matrix)
 
-                elif (matrix[i][j] == [True, True, True, False] or matrix[i][j] == [False, True, True, False]):
+                elif (matrix[i][j] == [True, True, True, False]):
 
 
                     randomize = randint(0, 1) # randomly print 1 or 0
@@ -362,7 +365,7 @@ def optimizeStage (n, stage, matrix):
                     printStage(stage)
                     printMatrix(matrix)
 
-                elif (matrix[i][j] == [True, False, True, True] or matrix[i][j] == [False, False, True, True]):
+                elif (matrix[i][j] == [True, False, True, True]):
 
                     stage[i][j] = 'o'
                     changes += 1
@@ -372,7 +375,7 @@ def optimizeStage (n, stage, matrix):
                     printStage(stage)
                     printMatrix(matrix)
 
-                elif(matrix[i][j] == [True, True, True, True] or matrix[i][j] == [False, True, True, True]):
+                elif(matrix[i][j] == [True, True, True, True]):
                     stage[i][j] = 'o'
                     changes += 1
 
@@ -400,11 +403,10 @@ path = "Input\Fashion Show\D-small-practice.in"
 mode = "r"
 with open (path, mode) as reader:
     samples = (reader.readlines())
-    reader.close() 
+    reader.close()
 
 no_samples = samples[0] # save the first line of the file containing the number of samples
 del samples[0] # deletes the first line of the file, leaving only the samples
-
 
 formatted_samples = [] # reformat samples for better usability
 for index,lines in enumerate (samples):
@@ -445,7 +447,7 @@ for index,lines in enumerate (samples):
 
 #FOR TESTING PURPOSES ONLY
 fashionShow([3, 1, ['o', 1, 1]])
+#fashionShow([10, 3, ['+', 1, 10], ['+', 5, 5], ['o', 5, 10], ['+', 10, 5]])
 #fashionShow([20, 3, ['o', 9, 9], ['+', 4, 4], ['+', 1, 11]])
 #fashionShow([29, 5, ['+', 1, 22], ['+', 1, 26], ['o', 1, 5], ['+', 1, 16], ['+', 1, 23]])
 #fashionShow([6, 0])
-
