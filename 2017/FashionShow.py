@@ -14,29 +14,31 @@ def fashionShow (stage_layout): # format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o
     del stage_layout[0]
 
     #FOR TESTING PURPOSES
-    print ("\nn: " + str (n) + "  \t\tm: " + str (m))
+    #print ("\nn: " + str (n) + "  \t\tm: " + str (m))
 
-    #if (m > 0):
-    for i,models in enumerate (stage_layout):
-        print ("pos. model " + str (i + 1) + " -> " + str(models)) # print all model positions
+    #for i,models in enumerate (stage_layout):
+    #    print ("pos. model " + str (i + 1) + " -> " + str(models)) # print all model positions
 
     stage = getStage(n, stage_layout) # format [['+', '-', '-'], ['+', '-',  '-'], [ '-',  '-', 'o']]
-    printStage(stage) # print current stage
+    #printStage(stage) # print current stage
 
     matrix = newMatrix(n) # format [[[False, False, True, False], [True, None, None, None], ...] for each element
-    updateMatrix(n,stage,matrix)
-    printMatrix(matrix) # print outfit matrix
+    populateMatrix(n, stage, matrix)
+    #printMatrix(matrix) # print outfit matrix
 
-    optimizeStage (n, stage, matrix)
+    models = optimizeStage (n, stage, matrix)
+    points = getPoints (stage)
 
-    return ''
+    #FOR TESTING PURPOSES
+    #print ("Number of changes done: " + str(models) + " Total points: " + str(points))
+
+    return str(points) + " " + str(models)
 
 # STAGE RELATED METHODS
 def getStage (n,stage_layout):
     """Takes a grid of size n x n, a list of m model's position coordinates on the grid (stage layout),
-    and returns stage as a matrix"""
+    and returns stage as a matrix (list of lists)"""
     stage = []
-
     k = n  # store original value of n
 
     while (n > 0):
@@ -58,7 +60,6 @@ def getStage (n,stage_layout):
 
 def printStage (stage):
     """Prints the contents of the stage on a more readable format. This is an auxiliary method not part of the solution"""
-    #print(stage)
     print("")
     for row in stage:
         print(" ".join(row))
@@ -81,29 +82,29 @@ def newMatrix (n):
         n -= 1
     return new_matrix
 
-def updateMatrix (n, stage, matrix):
-    """Pairs a matrix with a stage"""
+def populateMatrix (n, stage, matrix):
+    """Pairs a matrix with a given stage layout, the values for the matrix are given
+    following the rules established on the problem enunciation"""
 
     for i,row in enumerate (stage):
         for j, column in enumerate (row):
-            #print("This is a: " + str(stage[i][j]))
+            #FOR TESTING PURPOSES
+            #print(str(stage[i][j]) + " found at row " + str(i) + " column " + str(j))
             if (stage[i][j] == 'x'):
-                #print ("x found at row " + str(i + 1) + " column " + str(j + 1))
                 refreshMatrix(matrix, i, j, 'x')
 
             elif (stage[i][j] == '+'):
-                #print("+ found at row " + str(i + 1) + " column " + str(j + 1))
                 refreshMatrix(matrix, i, j, '+')
 
             elif (stage[i][j] == 'o'):
-                #print("o found at row " + str(i + 1) + " column " + str(j + 1))
                 refreshMatrix(matrix, i, j, 'o')
 
             elif (stage[i][j] == '.'):
-                #print(". found at row " + str(i + 1) + " column " + str(j + 1))
                 refreshMatrix(matrix, i, j, '.')
 
 def refreshMatrix (matrix, row_index, column_index, style):
+    """Takes a given matrix, a style and its coordinates, updates the matrix values
+    following the rules established on the problem enunciation"""
 
     if (style == '.'):
         bool = 0 # for .
@@ -123,7 +124,7 @@ def refreshMatrix (matrix, row_index, column_index, style):
         while (column <= size and row <= size and column >= 0 and row >= 0):
             matrix[row][column][1] = matrix[row][column][1] and False #for +
             matrix[row][column][2] = matrix[row][column][2] and True #for x
-            matrix[row][column][3] = matrix[row][column][3] and False #for o
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row += 1
             column += 1
 
@@ -132,7 +133,7 @@ def refreshMatrix (matrix, row_index, column_index, style):
         while (column <= size and row <= size and column >= 0 and row >= 0):
             matrix[row][column][1] = matrix[row][column][1] and False #for +
             matrix[row][column][2] = matrix[row][column][2] and True #for x
-            matrix[row][column][3] = matrix[row][column][3] and False #for o
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row -= 1
             column += 1
 
@@ -154,10 +155,6 @@ def refreshMatrix (matrix, row_index, column_index, style):
             row += 1
             column -= 1
 
-        #matrix[row_index][column_index][0] = False
-        #matrix[row_index][column_index][2] = False
-        #matrix[row_index][column_index][3] = False
-
     elif (bool == 2): # for x
 
         column = 0
@@ -174,11 +171,7 @@ def refreshMatrix (matrix, row_index, column_index, style):
             matrix[row][column_index][3] = matrix[row][column_index][3] and False  # for o
             row += 1
 
-        #matrix[row_index][column_index][0] = False
-        #matrix[row_index][column_index][1] = False
-        #matrix[row_index][column_index][3] = False
-
-    elif (bool == 3):
+    elif (bool == 3): # for o
 
         column = 0
         for models in matrix:  # updates row
@@ -232,16 +225,11 @@ def refreshMatrix (matrix, row_index, column_index, style):
             row += 1
             column -= 1
 
-        #matrix[row_index][column_index][0] = False
-        #matrix[row_index][column_index][1] = False
-        #matrix[row_index][column_index][2] = False
-
-    #matrix[row_index][column_index][bool] = True
+    matrix[row_index][column_index][bool] = True
 
 def printMatrix (matrix):
-    """Auxiliary method that print the content of the matrix in a more readable format. Not part of the solution"""
-    # FOR TESTING PURPOSES
-    #print (matrix)
+    """Auxiliary method that print the content of the matrix in a more readable format.
+    This is not part of the solution"""
     printout = '\n'
 
     for rows in matrix:
@@ -281,56 +269,48 @@ def printMatrix (matrix):
             row += col
 
         printout += row + '\n'
+
+    # FOR TESTING PURPOSES
+    #print (matrix)
     print (printout)
 
 # OPTIMIZATION ALGORITHM
 def optimizeStage (n, stage, matrix):
-
+    """Takes a stage of dimension n, and a matrix of style values, optimizes the stage while updating the matrix
+    for the best possible outcome as established on the problem enunciation. It returns the number of changes done."""
     changes = 0
 
     for i,row in enumerate(stage):
         for j,column in enumerate(row):
-            print("matrix results for row: " + str(row) + " element > " + str(column))
+            #FOR TESTING PURPOSES
+            #print("matrix results for row: " + str(row) + " element -> " + str(column))
 
             if (column == '-'):
                 if (matrix[i][j] == [True, False, False, False]):
-
                     stage[i][j] = '.' # update stage
-                    changes += 1 # counter for changes made
-
-                    #updateMatrix(n, stage, matrix) # update matrix, this method calls refresh too!
                     refreshMatrix(matrix, i, j, '.')
 
                 elif (matrix[i][j] == [True, True, False, False]):
                     stage[i][j] = '+'
-                    changes += 1
-
-                    #updateMatrix(n, stage, matrix)
                     refreshMatrix(matrix, i, j, '+')
+                    changes += 1
 
                 elif (matrix[i][j] == [True, False, True, False]):
                     stage[i][j] = 'x'
-                    changes += 1
-
-                    #updateMatrix(n, stage, matrix)
                     refreshMatrix(matrix, i, j, 'x')
+                    changes += 1
 
                 elif (matrix[i][j] == [True, False, False, True]):
                     stage[i][j] = 'o'
-                    changes += 1
-
-                    #updateMatrix(n, stage, matrix)
                     refreshMatrix(matrix, i, j, 'o')
+                    changes += 1
 
                 elif (matrix[i][j] == [True, True, False, True]):
                     stage[i][j] = 'o'
+                    refreshMatrix(matrix, i, j, 'o')
                     changes += 1
 
-                    #updateMatrix(n, stage, matrix)
-                    refreshMatrix(matrix, i, j, 'o')
-
                 elif (matrix[i][j] == [True, True, True, False]):
-
                     randomize = randint(0, 1) # randomly print 1 or 0
 
                     if (randomize == 0):
@@ -342,29 +322,36 @@ def optimizeStage (n, stage, matrix):
 
                     changes += 1
 
-                    #updateMatrix(n, stage, matrix)
-
                 elif (matrix[i][j] == [True, False, True, True]):
-
                     stage[i][j] = 'o'
-                    changes += 1
-
-                    #updateMatrix(n, stage, matrix)
                     refreshMatrix(matrix, i, j, 'o')
+                    changes += 1
 
                 elif(matrix[i][j] == [True, True, True, True]):
                     stage[i][j] = 'o'
+                    refreshMatrix(matrix, i, j, 'o')
                     changes += 1
 
-                    #updateMatrix(n, stage, matrix)
-                    refreshMatrix(matrix, i, j, 'o')
+            #FOR TESTING PURPOSES
+            #printStage(stage)
+            #printMatrix(matrix)
 
-            printStage(stage)
-            printMatrix(matrix)
+    return changes
 
+def getPoints (stage):
+    """Takes an optimized stage, and returns the amount of points  calculated as follows:
+    '.' = 0 points, 'x' or '+' = 1 point and 'o' = 2 points"""
+    points = 0
 
-    return ''
-
+    for row in stage:
+        for style in row:
+            if (style == '+'):
+                points += 1
+            elif (style == 'x'):
+                points += 1
+            if (style == 'o'):
+                points += 2
+    return points
 
 
 #PATH TO EXAMPLES, HARDCODED
@@ -414,19 +401,18 @@ for index,lines in enumerate (samples):
 
     if (len(new_sample)>0):
         formatted_samples.append(new_sample)
+
 #FOR TESTING PURPOSES
 #for sample in formatted_samples:
 #    print (sample)
 
-
-#for i, sample in enumerate (formatted_samples):
-#    print("Case #" + str(i + 1) + ": " + fashionShow(formatted_samples[i]))
-
-#FOR TESTING PURPOSES
+for i, sample in enumerate (formatted_samples):
+    print("Case #" + str(i + 1) + ": " + fashionShow(formatted_samples[i]))
 
 #FOR TESTING PURPOSES ONLY
+#fashionShow([6, 0])
 #fashionShow([3, 1, ['o', 2, 2]])
-fashionShow([10, 3, ['+', 1, 10], ['+', 5, 5], ['o', 5, 10], ['+', 10, 5]])
+#fashionShow([10, 0])
+#fashionShow([10, 3, ['+', 1, 10], ['+', 5, 5], ['o', 5, 10], ['+', 10, 5]])
 #fashionShow([20, 3, ['o', 9, 9], ['+', 4, 4], ['+', 1, 11]])
 #fashionShow([29, 5, ['+', 1, 22], ['+', 1, 26], ['o', 1, 5], ['+', 1, 16], ['+', 1, 23]])
-#fashionShow([6, 0])
