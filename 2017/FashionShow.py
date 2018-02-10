@@ -23,12 +23,11 @@ def fashionShow (stage_layout): # format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o
     stage = getStage(n, stage_layout) # format [['+', '-', '-'], ['+', '-',  '-'], [ '-',  '-', 'o']]
     printStage(stage) # print current stage
 
-
-    matrix = newMatrix(n) # format [[[None, False, True, False], [None, None, None, None], ...]
+    matrix = newMatrix(n) # format [[[False, False, True, False], [True, None, None, None], ...] for each element
     updateMatrix(n,stage,matrix)
     printMatrix(matrix) # print outfit matrix
 
-    #optimizeStage (n, stage, matrix)
+    optimizeStage (n, stage, matrix)
 
     return ''
 
@@ -36,22 +35,9 @@ def fashionShow (stage_layout): # format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o
 def getStage (n,stage_layout):
     """Takes a grid of size n x n, a list of m model's position coordinates on the grid (stage layout),
     and returns stage as a matrix"""
-    stage = getEmptyStage(n)
+    stage = []
 
-    for model in stage_layout:
-        style = model[0]
-        row = model[1] - 1
-        column = model[2] - 1
-
-        stage[row][column] = style
-
-    return stage
-
-def getEmptyStage (n):
-    """Takes an integer n and returns a matrix of n x n"""
-    emptyStage = []
-
-    k = n # store original value of n
+    k = n  # store original value of n
 
     while (n > 0):
         nn = k
@@ -59,10 +45,16 @@ def getEmptyStage (n):
         while (nn > 0):
             rows.append('-')
             nn -= 1
-        emptyStage.append(rows)
+        stage.append(rows)
         n -= 1
 
-    return emptyStage
+    for model in stage_layout:
+        style = model[0]
+        row = model[1] - 1
+        column = model[2] - 1
+
+        stage[row][column] = style
+    return stage
 
 def printStage (stage):
     """Prints the contents of the stage on a more readable format. This is an auxiliary method not part of the solution"""
@@ -71,7 +63,6 @@ def printStage (stage):
     for row in stage:
         print(" ".join(row))
     print("")
-
 
 # MATRIX RELATED METHODS
 def newMatrix (n):
@@ -84,13 +75,13 @@ def newMatrix (n):
         nn = k
         rows = []
         while (nn > 0):
-            rows.append([True,None,None,None]) # booleans for . + x and o respectively
+            rows.append([True,True,True,True]) # booleans for . + x and o respectively, True is the neutral of the and logical operator
             nn -= 1
         new_matrix.append(rows)
         n -= 1
     return new_matrix
 
-def updateMatrix (n, stage, new_matrix):
+def updateMatrix (n, stage, matrix):
     """Pairs a matrix with a stage"""
 
     for i,row in enumerate (stage):
@@ -98,19 +89,19 @@ def updateMatrix (n, stage, new_matrix):
             #print("This is a: " + str(stage[i][j]))
             if (stage[i][j] == 'x'):
                 #print ("x found at row " + str(i + 1) + " column " + str(j + 1))
-                refreshMatrix(new_matrix, i, j, 'x')
+                refreshMatrix(matrix, i, j, 'x')
 
             elif (stage[i][j] == '+'):
                 #print("+ found at row " + str(i + 1) + " column " + str(j + 1))
-                refreshMatrix(new_matrix, i, j, '+')
+                refreshMatrix(matrix, i, j, '+')
 
             elif (stage[i][j] == 'o'):
                 #print("o found at row " + str(i + 1) + " column " + str(j + 1))
-                refreshMatrix(new_matrix, i, j, 'o')
+                refreshMatrix(matrix, i, j, 'o')
 
             elif (stage[i][j] == '.'):
                 #print(". found at row " + str(i + 1) + " column " + str(j + 1))
-                refreshMatrix(new_matrix, i, j, '.')
+                refreshMatrix(matrix, i, j, '.')
 
 def refreshMatrix (matrix, row_index, column_index, style):
 
@@ -130,77 +121,77 @@ def refreshMatrix (matrix, row_index, column_index, style):
         column = column_index + 1  # updates diagonal FIRST QUADRANT
         row = row_index + 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False #for +
-            matrix[row][column][2] = True #for x
-            matrix[row][column][3] = False #for o
+            matrix[row][column][1] = matrix[row][column][1] and False #for +
+            matrix[row][column][2] = matrix[row][column][2] and True #for x
+            matrix[row][column][3] = matrix[row][column][3] and False #for o
             row += 1
             column += 1
 
         column = column_index + 1  # updates diagonal SECOND QUADRANT
         row = row_index - 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False #for +
-            matrix[row][column][2] = True #for x
-            matrix[row][column][3] = False #for o
+            matrix[row][column][1] = matrix[row][column][1] and False #for +
+            matrix[row][column][2] = matrix[row][column][2] and True #for x
+            matrix[row][column][3] = matrix[row][column][3] and False #for o
             row -= 1
             column += 1
 
         column = column_index - 1  # updates diagonal THIRD QUADRANT
         row = row_index - 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False #for +
-            matrix[row][column][2] = True #for x
-            matrix[row][column][3] = False #for o
+            matrix[row][column][1] = matrix[row][column][1] and False  # for +
+            matrix[row][column][2] = matrix[row][column][2] and True  # for x
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row -= 1
             column -= 1
 
         column = column_index - 1  # updates diagonal FOURTH QUADRANT
         row = row_index + 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False #for +
-            matrix[row][column][2] = True #for x
-            matrix[row][column][3] = False #for o
+            matrix[row][column][1] = matrix[row][column][1] and False  # for +
+            matrix[row][column][2] = matrix[row][column][2] and True  # for x
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row += 1
             column -= 1
 
-        matrix[row_index][column_index][0] = False
-        matrix[row_index][column_index][2] = False
-        matrix[row_index][column_index][3] = False
+        #matrix[row_index][column_index][0] = False
+        #matrix[row_index][column_index][2] = False
+        #matrix[row_index][column_index][3] = False
 
     elif (bool == 2): # for x
 
         column = 0
         for models in matrix: # updates row
-            matrix[row_index][column][1] = True  # for +
-            matrix[row_index][column][2] = False  # for x
-            matrix[row_index][column][3] = False  # for o
+            matrix[row_index][column][1] = matrix[row_index][column][1] and True  # for +
+            matrix[row_index][column][2] = matrix[row_index][column][2] and False  # for x
+            matrix[row_index][column][3] = matrix[row_index][column][3] and False  # for o
             column += 1
 
         row = 0
         for models in matrix: # updates column
-            matrix[row][column_index][1] = True  # for +
-            matrix[row][column_index][2] = False  # for x
-            matrix[row][column_index][3] = False  # for o
+            matrix[row][column_index][1] = matrix[row][column_index][1] and True  # for +
+            matrix[row][column_index][2] = matrix[row][column_index][2] and False  # for x
+            matrix[row][column_index][3] = matrix[row][column_index][3] and False  # for o
             row += 1
 
-        matrix[row_index][column_index][0] = False
-        matrix[row_index][column_index][1] = False
-        matrix[row_index][column_index][3] = False
+        #matrix[row_index][column_index][0] = False
+        #matrix[row_index][column_index][1] = False
+        #matrix[row_index][column_index][3] = False
 
     elif (bool == 3):
 
         column = 0
         for models in matrix:  # updates row
-            matrix[row_index][column][1] = True  # for +
-            matrix[row_index][column][2] = False  # for x
-            matrix[row_index][column][3] = False  # for o
+            matrix[row_index][column][1] = matrix[row_index][column][1] and True  # for +
+            matrix[row_index][column][2] = matrix[row_index][column][2] and False  # for x
+            matrix[row_index][column][3] = matrix[row_index][column][3] and False  # for o
             column += 1
 
         row = 0
         for models in matrix:  # updates column
-            matrix[row][column_index][1] = True  # for +
-            matrix[row][column_index][2] = False  # for x
-            matrix[row][column_index][3] = False  # for o
+            matrix[row][column_index][1] = matrix[row][column_index][1] and True  # for +
+            matrix[row][column_index][2] = matrix[row][column_index][2] and False  # for x
+            matrix[row][column_index][3] = matrix[row][column_index][3] and False  # for o
             row += 1
 
         size = len(matrix) - 1
@@ -208,49 +199,49 @@ def refreshMatrix (matrix, row_index, column_index, style):
         column = column_index + 1  # updates diagonal FIRST QUADRANT
         row = row_index + 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False  # for +
-            matrix[row][column][2] = True  # for x
-            matrix[row][column][3] = False  # for o
+            matrix[row][column][1] = matrix[row][column][1] and False  # for +
+            matrix[row][column][2] = matrix[row][column][2] and True  # for x
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row += 1
             column += 1
 
         column = column_index + 1  # updates diagonal SECOND QUADRANT
         row = row_index - 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False  # for +
-            matrix[row][column][2] = True  # for x
-            matrix[row][column][3] = False  # for o
+            matrix[row][column][1] = matrix[row][column][1] and False  # for +
+            matrix[row][column][2] = matrix[row][column][2] and True  # for x
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row -= 1
             column += 1
 
         column = column_index - 1  # updates diagonal THIRD QUADRANT
         row = row_index - 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False  # for +
-            matrix[row][column][2] = True  # for x
-            matrix[row][column][3] = False  # for o
+            matrix[row][column][1] = matrix[row][column][1] and False  # for +
+            matrix[row][column][2] = matrix[row][column][2] and True  # for x
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row -= 1
             column -= 1
 
         column = column_index - 1  # updates diagonal FOURTH QUADRANT
         row = row_index + 1
         while (column <= size and row <= size and column >= 0 and row >= 0):
-            matrix[row][column][1] = False  # for +
-            matrix[row][column][2] = True  # for x
-            matrix[row][column][3] = False  # for o
+            matrix[row][column][1] = matrix[row][column][1] and False  # for +
+            matrix[row][column][2] = matrix[row][column][2] and True  # for x
+            matrix[row][column][3] = matrix[row][column][3] and False  # for o
             row += 1
             column -= 1
 
-        matrix[row_index][column_index][0] = False
-        matrix[row_index][column_index][1] = False
-        matrix[row_index][column_index][2] = False
+        #matrix[row_index][column_index][0] = False
+        #matrix[row_index][column_index][1] = False
+        #matrix[row_index][column_index][2] = False
 
-    matrix[row_index][column_index][bool] = True
+    #matrix[row_index][column_index][bool] = True
 
 def printMatrix (matrix):
     """Auxiliary method that print the content of the matrix in a more readable format. Not part of the solution"""
-
-    print (matrix)
+    # FOR TESTING PURPOSES
+    #print (matrix)
     printout = '\n'
 
     for rows in matrix:
@@ -299,90 +290,78 @@ def optimizeStage (n, stage, matrix):
 
     for i,row in enumerate(stage):
         for j,column in enumerate(row):
-            #print (column)
+            print("matrix results for row: " + str(row) + " element > " + str(column))
+
             if (column == '-'):
-                print ("executing")
                 if (matrix[i][j] == [True, False, False, False]):
 
                     stage[i][j] = '.' # update stage
                     changes += 1 # counter for changes made
 
-                    updateMatrix(n, stage, matrix) # update matrix, this method calls refresh too!
-
-                    printStage(stage)
-                    printMatrix(matrix)
+                    #updateMatrix(n, stage, matrix) # update matrix, this method calls refresh too!
+                    refreshMatrix(matrix, i, j, '.')
 
                 elif (matrix[i][j] == [True, True, False, False]):
                     stage[i][j] = '+'
                     changes += 1
 
-                    updateMatrix(n, stage, matrix)
-
-                    printStage(stage)
-                    printMatrix(matrix)
+                    #updateMatrix(n, stage, matrix)
+                    refreshMatrix(matrix, i, j, '+')
 
                 elif (matrix[i][j] == [True, False, True, False]):
                     stage[i][j] = 'x'
                     changes += 1
 
-                    updateMatrix(n, stage, matrix)
-
-                    printStage(stage)
-                    printMatrix(matrix)
+                    #updateMatrix(n, stage, matrix)
+                    refreshMatrix(matrix, i, j, 'x')
 
                 elif (matrix[i][j] == [True, False, False, True]):
                     stage[i][j] = 'o'
                     changes += 1
 
-                    updateMatrix(n, stage, matrix)
-
-                    printStage(stage)
-                    printMatrix(matrix)
+                    #updateMatrix(n, stage, matrix)
+                    refreshMatrix(matrix, i, j, 'o')
 
                 elif (matrix[i][j] == [True, True, False, True]):
                     stage[i][j] = 'o'
                     changes += 1
 
-                    updateMatrix(n, stage, matrix)
-
-                    printStage(stage)
-                    printMatrix(matrix)
+                    #updateMatrix(n, stage, matrix)
+                    refreshMatrix(matrix, i, j, 'o')
 
                 elif (matrix[i][j] == [True, True, True, False]):
-
 
                     randomize = randint(0, 1) # randomly print 1 or 0
 
                     if (randomize == 0):
                         stage[i][j] = '+'
+                        refreshMatrix(matrix, i, j, '+')
                     else:
                         stage[i][j] = 'x'
+                        refreshMatrix(matrix, i, j, 'x')
 
                     changes += 1
 
-                    updateMatrix(n, stage, matrix)
-
-                    printStage(stage)
-                    printMatrix(matrix)
+                    #updateMatrix(n, stage, matrix)
 
                 elif (matrix[i][j] == [True, False, True, True]):
 
                     stage[i][j] = 'o'
                     changes += 1
 
-                    updateMatrix(n, stage, matrix)
-
-                    printStage(stage)
-                    printMatrix(matrix)
+                    #updateMatrix(n, stage, matrix)
+                    refreshMatrix(matrix, i, j, 'o')
 
                 elif(matrix[i][j] == [True, True, True, True]):
                     stage[i][j] = 'o'
                     changes += 1
 
-                    updateMatrix(n, stage, matrix)
+                    #updateMatrix(n, stage, matrix)
+                    refreshMatrix(matrix, i, j, 'o')
 
-                    printStage(stage)
-                    printMatrix(matrix)
+            printStage(stage)
+            printMatrix(matrix)
+
 
     return ''
 
@@ -446,8 +425,8 @@ for index,lines in enumerate (samples):
 #FOR TESTING PURPOSES
 
 #FOR TESTING PURPOSES ONLY
-fashionShow([3, 1, ['o', 1, 1]])
-#fashionShow([10, 3, ['+', 1, 10], ['+', 5, 5], ['o', 5, 10], ['+', 10, 5]])
+#fashionShow([3, 1, ['o', 2, 2]])
+fashionShow([10, 3, ['+', 1, 10], ['+', 5, 5], ['o', 5, 10], ['+', 10, 5]])
 #fashionShow([20, 3, ['o', 9, 9], ['+', 4, 4], ['+', 1, 11]])
 #fashionShow([29, 5, ['+', 1, 22], ['+', 1, 26], ['o', 1, 5], ['+', 1, 16], ['+', 1, 23]])
 #fashionShow([6, 0])
