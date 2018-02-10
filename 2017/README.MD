@@ -23,14 +23,10 @@ More <br>
 <br>
 <hr>
 <h3 id="pancake">Pancake Flipper</h3>
-<i>Script <b>PancakeFlipper.py</b></i>
+<i>Script <b>PancakeFlipper.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank">(See the Code)</a> <br>
 
 <h4>The Problem</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-
-Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-
-Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.
+<i><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0">Read the challenge at Google's Code Jam page!</i><br>
 
 <h4>My Solution</h4>
 The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
@@ -48,7 +44,7 @@ with the following k pancakes if the character equals –, on the right side and
 A variable containing the size of the pancake row is used to avoid and index out of bound error. Every
 time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
 is assigned a value True, that will determine if the final string returned by the function is the string
-“IMPOSSIBLE” or the counter flips casted as a string. <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank">See the Code.</a> 
+“IMPOSSIBLE” or the counter flips casted as a string.
 <br>
 <br>
 <a href="#top">Back to Top</a> 
