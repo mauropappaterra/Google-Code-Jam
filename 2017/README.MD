@@ -19,8 +19,8 @@ List of Solved Challenges<br>
 More <br>
 <a href="#help">Instructions to run the programs</a> <br>
 <a href="https://github.com/yogurt1989/Google-Code-Jam">Go Back</a>
-
 <br>
+
 <hr>
 <h3 id="pancake">Pancake Flipper</h3>
 <i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
@@ -46,67 +46,44 @@ is assigned a value True, that will determine if the final string returned by th
 <br>
 <a href="#top">Back to Top</a> 
 <br>
+
 <hr>
 <h3 id="numbers">Tidy Numbers</h3>
-<i>Script <b>TidyNumbers.py</b></i>
-
-<h4>The Problem</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-
-Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-
-Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.
-
+<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
+<i>Solution Script <b>TidyNumbers.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank">(view)</a> <br>
 <h4>My Solution</h4>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-
 Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-
 Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.<br>
 <br>
 <a href="#top">Back to Top</a> 
 <br>
+
 <hr>
 <h3 id="potty">Bathroom Stalls</h3>
-<i>Script <b>BathroomStalls.py</b></i>
-
-<h4>The Problem</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-
-Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-
-Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.
-
+<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p2">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
+<i>Solution Script <b>BathroomStalls.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/BathroomStalls.py" target="_blank">(view)</a> <br>
 <h4>My Solution</h4>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-
 Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-
 Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.<br>
 <br>
 <a href="#top">Back to Top</a> 
 <br>
+
 <hr>
 <h3 id="fashion">Fashion Show</h3>
-<i>Script <b>FashionShow.py</b></i>
-
-<h4>The Problem</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-
-Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-
-Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.
-
+<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p3">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
+<i>Solution Script <b>FashionShow.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/FashionShow.py" target="_blank">(view)</a> <br>
 <h4>My Solution</h4>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-
 Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-
 Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.
 <br>
 <br>
 <a href="#top">Back to Top</a> 
 <br>
+
 <hr>
 <h3 id="help">Instructions to run the programs</h3>
 -Clone or download this repository<br>
