@@ -23,9 +23,8 @@ More <br>
 <br>
 <hr>
 <h3 id="pancake">Pancake Flipper</h3>
-<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0">Click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
+<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
 <i>Solution Script <b>PancakeFlipper.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank">(view)</a> <br>
-<br>
 <h4>My Solution</h4>
 The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
 all samples. We saved the first line on the file, that contains the number of samples, in a variable
