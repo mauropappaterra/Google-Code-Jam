@@ -353,6 +353,38 @@ def getPoints (stage):
                 points += 2
     return points
 
+def format_samples(samples):
+    """Takes the sample file given as input, formats it so each example it's a different list of its own"""
+    formatted_samples = []  # reformat samples for better usability
+
+    for index, lines in enumerate(samples):
+
+        line = samples[index][:-1]
+        new_list = line.split(' ')
+
+        new_sample = []
+
+        if (new_list[0].isnumeric()):
+            n = int(new_list[0])
+            m = int(new_list[1])
+            new_sample.append(n)
+            new_sample.append(m)
+
+            index += 1
+            while (m > 0):
+                line = samples[index][:-1]
+                new_list = line.split(' ')
+                model = new_list[0]
+                row = int(new_list[1])
+                column = int(new_list[2])
+                new_sample.append([model, row, column])
+                index += 1
+                m -= 1
+
+        if (len(new_sample) > 0):
+            formatted_samples.append(new_sample)
+
+    return formatted_samples
 
 #PATH TO EXAMPLES, HARDCODED
 path = "Input\Fashion Show\D-small-practice.in"
@@ -374,40 +406,14 @@ with open (path, mode) as reader:
 no_samples = samples[0] # save the first line of the file containing the number of samples
 del samples[0] # deletes the first line of the file, leaving only the samples
 
-formatted_samples = [] # reformat samples for better usability
-for index,lines in enumerate (samples):
-
-    line = samples[index][:-1]
-    new_list = line.split(' ')
-
-    new_sample = []
-
-    if (new_list[0].isnumeric()):
-        n = int(new_list[0])
-        m = int(new_list[1])
-        new_sample.append(n)
-        new_sample.append(m)
-
-        index += 1
-        while (m > 0):
-            line = samples[index][:-1]
-            new_list = line.split(' ')
-            model = new_list[0]
-            row = int(new_list[1])
-            column = int(new_list[2])
-            new_sample.append([model, row, column])
-            index += 1
-            m -= 1
-
-    if (len(new_sample)>0):
-        formatted_samples.append(new_sample)
+formatted = format_samples (samples)
 
 #FOR TESTING PURPOSES
-#for sample in formatted_samples:
+#for sample in formatted:
 #    print (sample)
 
-for i, sample in enumerate (formatted_samples):
-    print("Case #" + str(i + 1) + ": " + fashionShow(formatted_samples[i]))
+for i, sample in enumerate (formatted):
+    print("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]))
 
 #FOR TESTING PURPOSES ONLY
 #fashionShow([6, 0])
