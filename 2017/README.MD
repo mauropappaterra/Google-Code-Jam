@@ -51,13 +51,13 @@ is assigned a value True, that will determine if the final string returned by th
 <i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
 <i>Solution Script <b>TidyNumbers.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank">(view)</a> <br>
 <h4>My Solution</h4>
-The first function that we call is convertToDigitList, this function will prepare our sample data to undergo
+The first function that we call is convertToDigitList(numberAsString), this function will prepare our sample data to undergo
 our algorithm by converting a number given as a string form the sample file in a list of integers containing
 each digit of the number as an element of the list. We will solve this exercise using this structure,
 nonetheless we have included other function to manipulate the samples and the results: the functions
-convertToString and convertToInteger convert the list of integers back to a string or a single integer
-respectively. The subfunction checkTidy will check if a list of integers is already tidy, if it is we will just
-return the same number. The subfunction findLastTidy will search for the last tidy number if the number
+convertToString(digitList) and convertToInteger(digitList) convert the list of integers back to a string or a single integer
+respectively. The subfunction checkTidy(digitList) will check if a list of integers is already tidy, if it is we will just
+return the same number. The subfunction findLastTidy(listOfDigits) will search for the last tidy number if the number
 given is untidy: a for loop will iterate the list of integers and if an integer is smaller than its predecessor it
 will be decreased by one and the following integers (digits) on its right turn into nines. This will not
 always guarantee that the number will be left tidy, to solve this we call the function recursively until it
@@ -71,9 +71,15 @@ returns a tidy number, once again we use the auxiliary function checkTidy to ver
 <i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p2">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
 <i>Solution Script <b>BathroomStalls.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/BathroomStalls.py" target="_blank">(view)</a> <br>
 <h4>My Solution</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.<br>
+This challenged seemed simple at first, but it became more complicated as I followed each step to get to a solution. Due to the intrinsic complexity of this challenge I implemented console printouts in order to aid me in the process, these have been commented out.
+
+The main algorithm is bathroomStalls (input). The first thing we need to do is to separate n (number of stalls) and k (number of people on the stall). Since nobody ever leaves, is always true that k <= n. I used tro different lists (arrays) in order to keep track of the occupied and used toilets. The array minimum keeps track of the formula min (Ls,Rs) = maximal, whereas the array maximum keeps track of the formula max (Ls,Lr) = maximal. In order to create this two least we call the algorithm createStalls(n) that returns a list with the configuration of the bathroom stalls, both ends are occupied, all in between (n) are empty. I created two constants OCCUPIED and EMPTY and assigned the values -1 and 0 respectively.
+
+Now we arrive to the first loop of the algorithm that will repeat as long as there are people on the queue and empty bathroom stalls. For each bathroom stall that is available, we calculate the number of empty stalls to the left and to the right, using the methods calculate_ls(stalls, index) and calculate_rs(stalls, index) respectively. We then use the Python functions to calculate the minimum and maximum and save the results on their corresponding array.
+
+For the first selection, we call the method return_maximal_min (list), this method takes a list of integers, and returns the a list of all indexes of the highest integers on the list. If this list has a single element, we have our chosen stall to occupied. Otherwise we run the second selection round as specified on the challenge enunciate. If this is the case we call the method return_maximal_max (first_selection, maximum), this method takes a list of all indexes from the first selection, returns a list of all indexes where maximum is maximal. In this last case if we have more than one candidate we choose the most left bathroom stall. Last but not least, we saved the last maximal minimum and last maximal maximum variables since we will need them for the final output.
+
+Once we have our decision we mark the stall as occupied in both minimum and maximum arrays. This is done until, there are no more people in the queue or all bathroom stalls are occupied. The final output is the last recorded values for the last maximal minimum and last maximal maximum.
 <br>
 <a href="#top">Back to Top</a> 
 <br>

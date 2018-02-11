@@ -134,14 +134,10 @@ def return_maximal_max (first_selection, maximum): # for second selection
     #print ("Second selection results " + str(second_selection))
     return second_selection
 
-# FOR TESTING PURPOSES
-# sample = "1000 1000"
-# print(bathroomStalls(sample))
-
 #PATH TO EXAMPLES, HARDCODED
-path = "Input\Bathroom Stalls\C-large-practice.in"
+#path = "Input\Bathroom Stalls\C-large-practice.in"
 #path = "Input\Bathroom Stalls\C-small-practice-2.in"
-#path = "Input\Bathroom Stalls\C-small-practice-1.in"
+path = "Input\Bathroom Stalls\C-small-practice-1.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
@@ -161,3 +157,7 @@ del samples[0] # deletes the first line of the file, leaving only the samples
 
 for i, sample in enumerate (samples):
     print("Case #" + str(i + 1) + ": " + bathroomStalls(samples[i]))
+
+# FOR TESTING PURPOSES
+#sample = "10 5"
+#print(bathroomStalls(sample))
