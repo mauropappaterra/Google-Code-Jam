@@ -26,8 +26,7 @@ More <br>
 <i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
 <i>Solution Script <b>PancakeFlipper.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank">(view)</a> <br>
 <h4>My Solution</h4>
-The first exercise we chose was the Pancake Flipper. We used Python library to iterate the file containing
-all samples. We saved the first line on the file, that contains the number of samples, in a variable
+We first iterate the file containing all samples. We saved the first line on the file, that contains the number of samples, in a variable
 no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
 file and returns a dictionary containing the row of pancakes as a string and the number of possible
 simultaneous flips (k) as an integer. We call this function to each line of the file as we call our main
@@ -38,7 +37,7 @@ the function. We also create a flag impossible deemed as false that will indicat
 have a solution or not. An auxiliary function flip(char) toggles + for – and – for +. The heart of the
 algorithm are two while statements that will check each character (pancake) on the row and flip it along
 with the following k pancakes if the character equals –, on the right side and on the left side respectively.
-A variable containing the size of the pancake row is used to avoid and index out of bound error. Every
+A variable containing the size of the pancake row is used to avoid and index out of bounds error. Every
 time a flip occurs the counter flips increases by 1. If there is a lock or an infinite loop, the flag impossible
 is assigned a value True, that will determine if the final string returned by the function is the string
 “IMPOSSIBLE” or the counter flips casted as a string.
@@ -52,9 +51,17 @@ is assigned a value True, that will determine if the final string returned by th
 <i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
 <i>Solution Script <b>TidyNumbers.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank">(view)</a> <br>
 <h4>My Solution</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed auctor turpis. Nullam id varius nisl. Sed mattis ullamcorper augue, quis scelerisque quam varius vel. Curabitur sit amet nulla rutrum, mollis odio id, imperdiet tortor. Curabitur euismod vehicula diam a ultricies. Pellentesque iaculis varius aliquet. Nullam vitae felis a risus imperdiet laoreet. Integer scelerisque nec nibh in vulputate. Nulla facilisi. Sed quis sapien nisl. Nam commodo leo vestibulum tellus cursus, a mollis quam egestas. Sed sodales feugiat lorem vel faucibus. In hac habitasse platea dictumst.
-Pellentesque id commodo arcu. Vestibulum pharetra dui ac turpis suscipit, in iaculis velit venenatis. Fusce ut magna iaculis, varius neque in, viverra nisi. Suspendisse rutrum nibh a consequat efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis non nunc et vulputate. Donec hendrerit dui ut dui placerat volutpat. Sed egestas a elit vitae tincidunt. Donec et elit nisl. Vivamus placerat ligula ac tellus dictum malesuada.
-Phasellus ac nisl vitae ipsum condimentum convallis. Curabitur ipsum eros, aliquam sit amet posuere ac, luctus a magna. In sed hendrerit ex. Mauris faucibus velit a magna ultrices, a iaculis sem ultrices. Vestibulum fermentum tellus eu augue consectetur commodo. Quisque eget lobortis felis. In bibendum convallis nisl bibendum dignissim. Nunc eget ante in tortor porttitor maximus vel quis nunc. Curabitur neque odio, dapibus non convallis eget, placerat eu orci. Cras id porta mi. Integer condimentum mauris elit, vel consequat justo eleifend vitae. Nulla congue lorem arcu, eget ultrices dolor sollicitudin in.<br>
+The first function that we call is convertToDigitList, this function will prepare our sample data to undergo
+our algorithm by converting a number given as a string form the sample file in a list of integers containing
+each digit of the number as an element of the list. We will solve this exercise using this structure,
+nonetheless we have included other function to manipulate the samples and the results: the functions
+convertToString and convertToInteger convert the list of integers back to a string or a single integer
+respectively. The subfunction checkTidy will check if a list of integers is already tidy, if it is we will just
+return the same number. The subfunction findLastTidy will search for the last tidy number if the number
+given is untidy: a for loop will iterate the list of integers and if an integer is smaller than its predecessor it
+will be decreased by one and the following integers (digits) on its right turn into nines. This will not
+always guarantee that the number will be left tidy, to solve this we call the function recursively until it
+returns a tidy number, once again we use the auxiliary function checkTidy to verify this every time. <br>
 <br>
 <a href="#top">Back to Top</a> 
 <br>
