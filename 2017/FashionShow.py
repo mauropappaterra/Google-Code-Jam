@@ -274,7 +274,7 @@ def printMatrix (matrix):
     #print (matrix)
     print (printout)
 
-# OPTIMIZATION ALGORITHM
+# OTHER ALGORITHMS
 def optimizeStage (n, stage, matrix):
     """Takes a stage of dimension n, and a matrix of style values, optimizes the stage while updating the matrix
     for the best possible outcome as established on the problem enunciation. It returns the number of changes done."""
