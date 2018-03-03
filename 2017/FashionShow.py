@@ -415,9 +415,9 @@ formatted = format_samples (samples)
 # SAVE OUTPUT TO EXTERNAL FILE
 #path = path.replace("Input", "Output")
 #output = open(path, "+w")
-for i, sample in enumerate (formatted):
-    print("Case #" + str(i + 1) + ": " + fashionShow(formatted[i])) # print to console
-    #output.write("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]) + "\n") # OR save to external file
+for i, sample in enumerate (formatted): # print to console OR save to external file
+    print("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]))
+    #output.write("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]) + "\n")
 #output.close()
 
 # FOR TESTING PURPOSES ONLY
