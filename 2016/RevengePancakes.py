@@ -13,16 +13,12 @@ def pancakeRevenge (stack):
     while (not ready(stack)):
         i = 0
 
-        while (stack[i] == X):
+        while (stack[i] == X and not (i == len(stack))):
             i += 1
-            if (i == len(stack)):
-                break
 
         if (i == 0):
-            while (stack[i] == O):
+            while (stack[i] == O and not (i == len(stack))):
                 i+= 1
-                if (i == len(stack)):
-                    break
 
         # FOR TESTING PURPOSES
         #print ("After flippin' the top " + str(i) + " pancake(s):")
