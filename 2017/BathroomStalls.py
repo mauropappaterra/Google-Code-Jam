@@ -52,7 +52,7 @@ def bathroomStalls (input):
         last_min = str(minimum[choose])  # get last maximal minimum
         last_max = str(maximum[choose])  # get last maximal maximum
 
-        # For Testing Purposes
+        # FOR TESTING PURPOSES
         #print("\nA potty has been occupied..!")
         #print ("\nLast min: " + str(last_min))
         #print ("Last max: " + str(last_max))
@@ -66,7 +66,6 @@ def bathroomStalls (input):
         #print("Insertion at index " + str(choose) + "(DENOTED BY -1): "+ str(maximum))
 
     return last_max + " " + last_min
-
 
 def createStalls(n):
     """Returns a list with the configuration of the bathroom stalls, both ends
@@ -134,10 +133,10 @@ def return_maximal_max (first_selection, maximum): # for second selection
     #print ("Second selection results " + str(second_selection))
     return second_selection
 
-#PATH TO EXAMPLES, HARDCODED
-#path = "Input\Bathroom Stalls\C-large-practice.in"
+# PATH TO EXAMPLES, HARDCODED
+#path = "Input\Bathroom Stalls\C-small-practice-1.in"
 #path = "Input\Bathroom Stalls\C-small-practice-2.in"
-path = "Input\Bathroom Stalls\C-small-practice-1.in"
+path = "Input\Bathroom Stalls\C-large-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
@@ -155,8 +154,13 @@ with open (path, mode) as reader:
 no_samples = samples[0] # save the first line of the file containing the number of samples
 del samples[0] # deletes the first line of the file, leaving only the samples
 
+# SAVE OUTPUT TO EXTERNAL FILE
+#path = path.replace("Input","Output")
+#output = open(path, "+w")
 for i, sample in enumerate (samples):
-    print("Case #" + str(i + 1) + ": " + bathroomStalls(samples[i]))
+    print("Case #" + str(i + 1) + ": " + bathroomStalls(samples[i])) # print to console
+    #output.write("Case #" + str(i + 1) + ": " + bathroomStalls(samples[i]) + "\n") # OR saved to external file
+#output.close()
 
 # FOR TESTING PURPOSES
 #sample = "10 5"

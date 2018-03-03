@@ -87,8 +87,9 @@ def checkTidy (digitList):
     return tidy
 
 #PATH TO EXAMPLES, HARDCODED
-path = "Input\Tidy Numbers\B-large-practice.in"
 #path = "Input\Tidy Numbers\B-small-practice.in"
+path = "Input\Tidy Numbers\B-large-practice.in"
+
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
@@ -106,5 +107,10 @@ with open (path, mode) as reader:
 no_samples = samples[0] # save the first line of the file containing the number of samples
 del samples[0] # deletes the first line of the file, leaving only the samples
 
+# SAVE OUTPUT TO EXTERNAL FILE
+#path = path.replace("Input","Output")
+#output = open(path, "+w")
 for i, sample in enumerate (samples):
-    print("Case #" + str(i + 1) + ": " + tidyNumbers(samples[i]))
+    print("Case #" + str(i + 1) + ": " + tidyNumbers(samples[i])) # print to console
+    #output.write("Case #" + str(i + 1) + ": " + tidyNumbers(samples[i]) + "\n") # OR save to external file
+#output.close()

@@ -2,6 +2,7 @@
 # PancakeFlipper.py
 # Created by Mauro J. Pappaterra & Hassan Odimi on 29 of September 2017.
 from pathlib import Path
+import os
 
 X = '+'
 O = '-'
@@ -18,7 +19,7 @@ def pancakeFlipper(row, k):
     flips = 0
     impossible = False
 
-    #FOR TESTING ONLY
+    # FOR TESTING ONLY
     #print("number of flips: " + str(flips))
     #print(row)
 
@@ -31,7 +32,7 @@ def pancakeFlipper(row, k):
                 aux +=1
 
             flips += 1
-            #FOR TESTING ONLY
+            # FOR TESTING ONLY
             #print("number of flips: " + str(flips))
             #print(row)
 
@@ -43,7 +44,7 @@ def pancakeFlipper(row, k):
                 aux += 1
 
             flips += 1
-            #FOR TESTING ONLY
+            # FOR TESTING ONLY
             #print("number of flips: " + str(flips))
             #print(row)
 
@@ -59,7 +60,6 @@ def pancakeFlipper(row, k):
         return str(flips)
     else:
         return "IMPOSSIBLE"
-
 
 def flip (char):
     "Toggles X to O and O to X"
@@ -78,8 +78,8 @@ def returnDictionary (string):
     return {'row': row, 'k': k}
 
 # PATH TO EXAMPLES, HARDCODED
-path = "Input\Pancake Flipper\A-large-practice.in"
 #path = "Input\Pancake Flipper\A-small-practice.in"
+path = "Input\Pancake Flipper\A-large-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
@@ -97,19 +97,24 @@ with open (path, mode) as reader:
 no_samples = samples[0] # save the first line of the file containing the number of samples
 del samples[0] # deletes the first line of the file, leaving only the samples
 
-#ENUMERATES ALL SAMPLES (-1 for real index)
+# ENUMERATES ALL SAMPLES (-1 for real index)
 #for i, sample in enumerate (samples):
 #      print("Case #" + str(i + 1) + ":" + str(returnDictionary(samples[i])))
 
+# SAVE OUTPUT TO EXTERNAL FILE
+#path = path.replace("Input","Output")
+#output = open(path, "+w")
 for i, sample in enumerate (samples):
-    print("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i])))
+    print("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i]))) # print to console
+    #output.write("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i])) + "\n") # OR save to external file
+#output.close()
 
-#FOR TESTING ONLY
+# FOR TESTING ONLY
 #test = 62
 #print(samples[test])
 #print(pancakeFlipper(** returnDictionary(samples[test])))
 
-#FOR TESTING ONLY
+# FOR TESTING ONLY
 #sample1 = {'row':['-','-','-','x','-','x','x','-'], 'k': 3} # ---+-++-
 #sample2 = {'row':['x','x','x','x','x'], 'k': 4} # +++++
 #sample3 = {'row':['-','x','-','x','-'], 'k': 4} # -+-+-

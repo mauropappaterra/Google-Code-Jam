@@ -13,7 +13,7 @@ def fashionShow (stage_layout): # format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o
     del stage_layout[0] # ... and delete both from list!
     del stage_layout[0]
 
-    #FOR TESTING PURPOSES
+    # FOR TESTING PURPOSES
     #print ("\nn: " + str (n) + "  \t\tm: " + str (m))
 
     #for i,models in enumerate (stage_layout):
@@ -29,7 +29,7 @@ def fashionShow (stage_layout): # format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o
     models = optimizeStage (n, stage, matrix)
     points = getPoints (stage)
 
-    #FOR TESTING PURPOSES
+    # FOR TESTING PURPOSES
     #print ("Number of changes done: " + str(models) + " Total points: " + str(points))
 
     return str(points) + " " + str(models)
@@ -386,9 +386,9 @@ def format_samples(samples):
 
     return formatted_samples
 
-#PATH TO EXAMPLES, HARDCODED
-path = "Input\Fashion Show\D-small-practice.in"
-#path = "Input\Fashion Show\D-large-practice.in"
+# PATH TO EXAMPLES, HARDCODED
+#path = "Input\Fashion Show\D-small-practice.in"
+path = "Input\Fashion Show\D-large-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
@@ -408,14 +408,19 @@ del samples[0] # deletes the first line of the file, leaving only the samples
 
 formatted = format_samples (samples)
 
-#FOR TESTING PURPOSES
+# FOR TESTING PURPOSES
 #for sample in formatted:
 #    print (sample)
 
+# SAVE OUTPUT TO EXTERNAL FILE
+#path = path.replace("Input", "Output")
+#output = open(path, "+w")
 for i, sample in enumerate (formatted):
-    print("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]))
+    print("Case #" + str(i + 1) + ": " + fashionShow(formatted[i])) # print to console
+    #output.write("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]) + "\n") # OR save to external file
+#output.close()
 
-#FOR TESTING PURPOSES ONLY
+# FOR TESTING PURPOSES ONLY
 #fashionShow([6, 0])
 #fashionShow([3, 1, ['o', 2, 2]])
 #fashionShow([10, 0])
