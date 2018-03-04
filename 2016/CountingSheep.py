@@ -17,7 +17,6 @@ def countingSheep(n):
 
     return str(n * (i - 1))
 
-
 def check_number (n, seen_digits):
     number = list(str(n))
     # FOR TESTING PURPOSES
@@ -28,7 +27,6 @@ def check_number (n, seen_digits):
         seen_digits[d] = True
 
     return seen_digits
-
 
 def sleep_time (seen_digits):
     if (False in seen_digits):
