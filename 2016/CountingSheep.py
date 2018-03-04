@@ -2,6 +2,7 @@
 # CountingSheep.py
 # Created by Mauro J. Pappaterra on 04 of March 2018.
 from pathlib import Path
+
 def countingSheep(n):
     seen_digits = [False,False,False,False,False,False,False,False,False,False] # 0 to 9
     n = int(n)
