@@ -109,7 +109,8 @@ For the scripts to work properly all external input files should be formated fol
 
 <h4>Output handling</h4>
 You can choose whether you want to print the output on the terminal or save it to an external file.
-Print to screen is left as default, you can change this by uncommenting the following lines:
+Printing the output in the screen is the default option, you can change this by uncommenting the following lines in all files:
+<br>
 <br>
 <pre>
 # SAVE OUTPUT TO EXTERNAL FILE

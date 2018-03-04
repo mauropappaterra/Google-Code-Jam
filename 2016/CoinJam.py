@@ -133,12 +133,12 @@ no_samples = samples[0] # save the first line of the file containing the number 
 del samples[0] # deletes the first line of the file, leaving only the samples
 
 # SAVE OUTPUT TO EXTERNAL FILE
-path = path.replace("Input","Output")
-output = open(path, "+w")
+#path = path.replace("Input","Output")
+#output = open(path, "+w")
 for i, sample in enumerate (samples): # print to console OR saved to external file
-    #print("Case #" + str(i + 1) + ": " + coinJam(sample))
-    output.write("Case #" + str(i + 1) + ": " + coinJam(sample) + "\n")
-output.close()
+    print("Case #" + str(i + 1) + ": " + coinJam(sample))
+    #output.write("Case #" + str(i + 1) + ": " + coinJam(sample) + "\n")
+#output.close()
 
 # FOR TESTING PURPOSES
 #coinJam("4 10\n")
