@@ -106,6 +106,24 @@ All input files are hardcoded, if you want to use your own input files uncomment
 </pre>
 For the scripts to work properly all external input files should be formated following Google's Code Jam specifications.
 <br>
+
+<h4>Output handling</h4>
+You can choose whether you want to print the output on the terminal or save it to an external file.
+Print to screen is left as default, you can change this by uncommenting the following lines:
+<br>
+<pre>
+# SAVE OUTPUT TO EXTERNAL FILE
+path = path.replace("Input","Output")
+output = open(path, "+w")
+for i, sample in enumerate (samples): # print to console OR saved to external file
+    #print("Case #" + str(i + 1) + ": " + coinJam(sample))
+    output.write("Case #" + str(i + 1) + ": " + coinJam(sample) + "\n")
+output.close()
+</pre>
+All external files are saved under the corresponding name inside the 'Output' folder. Any existing files inside the folder will be overwritten, you can harcode a different file name or path location directly into the code in order to avoid this.
+<br>
+
+<br>
 <br>
 <a href="#top">Back to Top</a> 
 <br>
