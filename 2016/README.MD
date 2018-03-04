@@ -110,7 +110,7 @@ For the scripts to work properly all external input files should be formated fol
 
 <h4>Output handling</h4>
 You can choose whether you want to print the output on the terminal or save it to an external file.
-Printing the output in the screen is the default option, you can change this by uncommenting the following lines in all files:
+Printing the output to the screen is the default option, you can change this by uncommenting the following lines in all files:
 <br>
 <br>
 <pre>
@@ -122,8 +122,8 @@ for i, sample in enumerate (samples): # print to console OR saved to external fi
     output.write("Case #" + str(i + 1) + ": " + coinJam(sample) + "\n")
 output.close()
 </pre>
-All external files are saved under the corresponding name inside the 'Output' folder. Any existing files inside the folder will be overwritten, you can hardcode a different file name or path location directly into the code in order to avoid this.<br>
-Notice that if you decide to simultaneously print to screen and external file, the computational time of the solutions will be heavily compromised. You should do one at the time.
+All external files are saved under the corresponding name inside the 'Output' folder. Any existing files inside the folder will be overwritten. To avoid this, you can hardcode a different file name or path location directly into the code.<br>
+Notice that if you decide to simultaneously print the output to the screen and save it to an external file, the computational time of the solutions will be heavily compromised. You should do one at the time.
 <br>
 
 <br>
