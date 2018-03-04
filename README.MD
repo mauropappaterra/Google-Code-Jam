@@ -6,9 +6,10 @@ This is a collection of my solutions to various challenges from <a href="https:/
 <br>
 
 Jump to folder:<br>
-<!-- <a href="">2016</a><br> -->
+<!-- <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2015">2015</a><br> -->
+<a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2016">2016</a><br>
 <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2017">2017</a><br>
-<!-- <a href="">2018</a><br> -->
+<!-- <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2018">2018</a><br> -->
 <br>
 
 <pre>
