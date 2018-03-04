@@ -75,9 +75,9 @@ del samples[0] # deletes the first line of the file, leaving only the samples
 # SAVE OUTPUT TO EXTERNAL FILE
 #path = path.replace("Input","Output")
 #output = open(path, "+w")
-for i, sample in enumerate (samples):
+for i, sample in enumerate (samples): # print to console OR saved to external file
     print("Case #" + str(i + 1) + ": " + pancakeRevenge(sample))
-    #output.write("Case #" + str(i + 1) + ": " + pancakeRevenge(sample) + "\n") # OR saved to external file
+    #output.write("Case #" + str(i + 1) + ": " + pancakeRevenge(sample) + "\n")
 #output.close()
 
 # FOR TESTING PURPOSES
