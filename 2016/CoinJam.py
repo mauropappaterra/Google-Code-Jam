@@ -74,9 +74,10 @@ def check_composite (number):
     check = 2
 
     while (check < top):
-        if (number % check == 0):
+        if (number % check == 0 or number % top):
             return True
         check += 1
+        top -= 1
 
     return False
 
