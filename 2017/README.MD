@@ -144,7 +144,8 @@ for i, sample in enumerate (samples): # print to console OR saved to external fi
     output.write("Case #" + str(i + 1) + ": " + coinJam(sample) + "\n")
 output.close()
 </pre>
-All external files are saved under the corresponding name inside the 'Output' folder. Any existing files inside the folder will be overwritten, you can harcode a different file name or path location directly into the code in order to avoid this.
+All external files are saved under the corresponding name inside the 'Output' folder. Any existing files inside the folder will be overwritten, you can hardcode a different file name or path location directly into the code in order to avoid this.<br>
+Notice that if you decide to simultaneously print to screen and external file, the computational time of the solutions will be heavily compromised. You should do one at the time.
 <br>
 <br>
 <a href="#top">Back to Top</a> 
