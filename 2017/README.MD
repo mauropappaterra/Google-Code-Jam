@@ -23,7 +23,7 @@ More <br>
 
 <hr>
 <h3 id="pancake">Pancake Flipper</h3>
-<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
 <i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank"><b>PancakeFlipper.py</b></a> <br>
 <h4>My Solution</h4>
 We first iterate the file containing all samples. We saved the first line on the file, that contains the number of samples, in a variable
@@ -48,7 +48,7 @@ is assigned a value True, that will determine if the final string returned by th
 
 <hr>
 <h3 id="numbers">Tidy Numbers</h3>
-<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
 <i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank"><b>TidyNumbers.py</b></a> <br>
 <h4>My Solution</h4>
 The first function that we call is convertToDigitList(numberAsString), this function will prepare our sample data to undergo
@@ -68,7 +68,7 @@ returns a tidy number, once again we use the auxiliary function checkTidy to ver
 
 <hr>
 <h3 id="potty">Bathroom Stalls</h3>
-<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p2"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p2"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
 <i>Solution Script</i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/BathroomStalls.py" target="_blank"> <b>BathroomStalls.py</b></a> <br>
 <h4>My Solution</h4>
 This challenged seemed simple at first, but it became more complicated as I followed each step to get to a solution. Due to the intrinsic complexity of this challenge I implemented console printouts in order to aid me in the process, these have been commented out.
@@ -82,7 +82,7 @@ Once we have our decision we mark the stall as occupied in both minimum and maxi
 
 <hr>
 <h3 id="fashion">Fashion Show</h3>
-<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p3"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p3"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
 <i>Solution Script</i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/FashionShow.py" target="_blank"><b>FashionShow.py</b></a> <br>
 <h4>My Solution</h4>
 This was one difficult challenge! To start with, the samples are all given in multiple lines of texts. To solve this I wrote a method format_samples(samples) that formats each sample as a list containing all samples as list of their own following the format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o', 1, 19]], where the first number appearing is n, the second corresponds to m, and then all given models as list, containing style, and row and column coordinate positions respectively.<br>
