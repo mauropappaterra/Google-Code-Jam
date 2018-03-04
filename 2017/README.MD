@@ -23,8 +23,8 @@ More <br>
 
 <hr>
 <h3 id="pancake">Pancake Flipper</h3>
-<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
-<i>Solution Script <b>PancakeFlipper.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank">(view)</a> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank"><b>PancakeFlipper.py</b></a> <br>
 <h4>My Solution</h4>
 We first iterate the file containing all samples. We saved the first line on the file, that contains the number of samples, in a variable
 no_samples, then we created a special function returnDictionary(string) that takes a line from the sample
@@ -48,8 +48,8 @@ is assigned a value True, that will determine if the final string returned by th
 
 <hr>
 <h3 id="numbers">Tidy Numbers</h3>
-<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
-<i>Solution Script <b>TidyNumbers.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank">(view)</a> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/TidyNumbers.py" target="_blank"><b>TidyNumbers.py</b></a> <br>
 <h4>My Solution</h4>
 The first function that we call is convertToDigitList(numberAsString), this function will prepare our sample data to undergo
 our algorithm by converting a number given as a string form the sample file in a list of integers containing
@@ -68,8 +68,8 @@ returns a tidy number, once again we use the auxiliary function checkTidy to ver
 
 <hr>
 <h3 id="potty">Bathroom Stalls</h3>
-<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p2">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
-<i>Solution Script <b>BathroomStalls.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/BathroomStalls.py" target="_blank">(view)</a> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p2"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>Solution Script</i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/BathroomStalls.py" target="_blank"> <b>BathroomStalls.py</b></a> <br>
 <h4>My Solution</h4>
 This challenged seemed simple at first, but it became more complicated as I followed each step to get to a solution. Due to the intrinsic complexity of this challenge I implemented console printouts in order to aid me in the process, these have been commented out.
 The main algorithm is bathroomStalls (input). The first thing we need to do is to separate n (number of stalls) and k (number of people on the stall). Since nobody ever leaves, is always true that k <= n. I used tro different lists (arrays) in order to keep track of the occupied and used toilets. The array minimum keeps track of the formula min (Ls,Rs) = maximal, whereas the array maximum keeps track of the formula max (Ls,Lr) = maximal. In order to create this two least we call the algorithm createStalls(n) that returns a list with the configuration of the bathroom stalls, both ends are occupied, all in between (n) are empty. I created two constants OCCUPIED and EMPTY and assigned the values -1 and 0 respectively.<br>
@@ -82,8 +82,8 @@ Once we have our decision we mark the stall as occupied in both minimum and maxi
 
 <hr>
 <h3 id="fashion">Fashion Show</h3>
-<i>The challenge <b><a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p3">click here to read the full challenge at Google's Code Jam website</a></b></i> <br>
-<i>Solution Script <b>FashionShow.py</b> </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/FashionShow.py" target="_blank">(view)</a> <br>
+<i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p3"><b>click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
+<i>Solution Script</i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/FashionShow.py" target="_blank"><b>FashionShow.py</b></a> <br>
 <h4>My Solution</h4>
 This was one difficult challenge! To start with, the samples are all given in multiple lines of texts. To solve this I wrote a method format_samples(samples) that formats each sample as a list containing all samples as list of their own following the format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o', 1, 19]], where the first number appearing is n, the second corresponds to m, and then all given models as list, containing style, and row and column coordinate positions respectively.<br>
 Once the samples are formatted we can start solving the challenge. The main algorithm fashionShow(stage_layout) takes a stage layout (sample) as an argument. First it stores the values of n and m in independent variables and deletes them from the list, leaving a full list of only models styles and coordinates (if any). For this solution I used two different matrices, the first matrix contains the stage layout, the second matrix contains a list of four booleans that keep track of the possible changes for each model on the stage. To get the first matrix we call the method getStage(n, stage_layout). This method takes a grid of size n x n, a list of m model's position coordinates on the grid (stage layout), and returns the stage as a matrix (list of lists). All empty spaces on the list are completed with the char '-'. Then we proceed to create the second matrix, the method newMatrix (n) returns a new matrix of n x n, that contains no estimations. The neutral value I chose is True, since it is neutral on the logical operator AND, that is to say it will be absorbed when the real estimations are given. Each element of the second matrix corresponds to each model on the first matrix. The second matrix keeps a list (array) of booleans of the form [True,True,True,True], corresponding respectively to the possible states '.', '+', 'x', or 'o'. Once we got our 'empty' matrix it is time to pair it with the given stage, to do this we call the method populateMatrix (n,stage,matrix). This method will iterate both matrices, and call the subroutine refreshMatrix (matrix, row_index, column_index, style) for every model on the stage. The latest method will, update the entire estimation matrix according to the set of rules given on the Fashion Challenge. Note that estimations must be updated from the coordinates of insertion of a model taking into account rows, columns and diagonal lines (which I separated in four different quadrants).
