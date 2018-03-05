@@ -412,10 +412,10 @@ formatted = format_samples (samples)
 #for sample in formatted:
 #    print (sample)
 
-# SAVE OUTPUT TO EXTERNAL FILE
+# PRINT OUTPUT OR SAVE TO EXTERNAL FILE
 #path = path.replace("Input", "Output")
 #output = open(path, "+w")
-for i, sample in enumerate (formatted): # print to console OR save to external file
+for i, sample in enumerate (formatted):
     print("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]))
     #output.write("Case #" + str(i + 1) + ": " + fashionShow(formatted[i]) + "\n")
 #output.close()

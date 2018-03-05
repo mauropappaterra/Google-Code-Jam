@@ -55,10 +55,10 @@ with open (path, mode) as reader:
 no_samples = samples[0] # save the first line of the file containing the number of samples
 del samples[0] # deletes the first line of the file, leaving only the samples
 
-# SAVE OUTPUT TO EXTERNAL FILE
+# PRINT OUTPUT OR SAVE TO EXTERNAL FILE
 #path = path.replace("Input","Output")
 #output = open(path, "+w")
-for i, sample in enumerate (samples): # print to console OR saved to external file
+for i, sample in enumerate (samples):
     print("Case #" + str(i + 1) + ": " + countingSheep(sample))
     #output.write("Case #" + str(i + 1) + ": " + countingSheep(sample) + "\n")
 #output.close()

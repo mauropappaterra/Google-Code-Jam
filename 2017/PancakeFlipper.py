@@ -101,10 +101,10 @@ del samples[0] # deletes the first line of the file, leaving only the samples
 #for i, sample in enumerate (samples):
 #      print("Case #" + str(i + 1) + ":" + str(returnDictionary(samples[i])))
 
-# SAVE OUTPUT TO EXTERNAL FILE
+# PRINT OUTPUT OR SAVE TO EXTERNAL FILE
 #path = path.replace("Input","Output")
 #output = open(path, "+w")
-for i, sample in enumerate (samples): # print to console OR save to external file
+for i, sample in enumerate (samples):
     print("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i])))
     #output.write("Case #" + str(i + 1) + ": " + pancakeFlipper(** returnDictionary(samples[i])) + "\n")
 #output.close()

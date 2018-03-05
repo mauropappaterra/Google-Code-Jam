@@ -25,7 +25,7 @@ More <br>
 <hr>
 <h3 id="sheep"> Counting Sheep</h3>
 <i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
-<i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2017/PancakeFlipper.py" target="_blank"><b>CountingSheep.py</b></a> <br>
+<i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2016/CountingSheep.py" target="_blank"><b>CountingSheep.py</b></a> <br>
 <h4>My Solution</h4>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -114,15 +114,15 @@ Printing the output to the screen is the default option, you can change this by 
 <br>
 <br>
 <pre>
-# SAVE OUTPUT TO EXTERNAL FILE
+# PRINT OUTPUT OR SAVE TO EXTERNAL FILE
 path = path.replace("Input","Output")
 output = open(path, "+w")
-for i, sample in enumerate (samples): # print to console OR saved to external file
+for i, sample in enumerate (samples):
     #print("Case #" + str(i + 1) + ": " + coinJam(sample))
     output.write("Case #" + str(i + 1) + ": " + coinJam(sample) + "\n")
 output.close()
 </pre>
-All external files are saved under the corresponding name inside the 'Output' folder. Any existing files inside the folder will be overwritten. To avoid this, you can hardcode a different file name or path location directly into the code.<br>
+All external files are saved under the corresponding name inside the 'Output' folder. Any existing files inside the folder will be overwritten. To avoid this, you can hardcode a different file name and path location directly into the code by modifying the variable 'path'.<br>
 Notice that if you decide to simultaneously print the output to the screen and save it to an external file, the computational time of the solutions will be heavily compromised. You should do one at the time.
 <br>
 
