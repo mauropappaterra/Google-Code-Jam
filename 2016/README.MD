@@ -14,7 +14,7 @@ List of Solved Challenges<br>
 <a href="#sheep">-Counting Sheep</a><br>
 <a href="#pancake">-Revenge of the Pancakes</a><br>
 <a href="#coinjam">-Coin Jam</a><br>
-<!-- <a href="#fractiles">-Fractiles</a><br> -->
+<a href="#fractiles">-Fractiles</a><br>
 
 <br>
 More <br>
@@ -56,21 +56,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <a href="#top">Back to Top</a> 
 <br>
 
-<!--
 <hr>
-<h3 id="fashion">Fashion Show</h3>
+<h3 id="fractiles">Fractiles</h3>
 <i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p3"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
-<i>Solution Script</i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2016/CoinJam.py" target="_blank"><b>CoinJam.py</b></a> <br>
+<i>Solution Script</i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2016/Fractiles.py" target="_blank"><b>Fractiles.py</b></a> <br>
 <h4>My Solution</h4>
-This was one difficult challenge! To start with, the samples are all given in multiple lines of texts. To solve this I wrote a method format_samples(samples) that formats each sample as a list containing all samples as list of their own following the format [48, 3, ['+', 1, 33], ['+', 1, 34], ['o', 1, 19]], where the first number appearing is n, the second corresponds to m, and then all given models as list, containing style, and row and column coordinate positions respectively.<br>
-Once the samples are formatted we can start solving the challenge. The main algorithm fashionShow(stage_layout) takes a stage layout (sample) as an argument. First it stores the values of n and m in independent variables and deletes them from the list, leaving a full list of only models styles and coordinates (if any). For this solution I used two different matrices, the first matrix contains the stage layout, the second matrix contains a list of four booleans that keep track of the possible changes for each model on the stage. To get the first matrix we call the method getStage(n, stage_layout). This method takes a grid of size n x n, a list of m model's position coordinates on the grid (stage layout), and returns the stage as a matrix (list of lists). All empty spaces on the list are completed with the char '-'. Then we proceed to create the second matrix, the method newMatrix (n) returns a new matrix of n x n, that contains no estimations. The neutral value I chose is True, since it is neutral on the logical operator AND, that is to say it will be absorbed when the real estimations are given. Each element of the second matrix corresponds to each model on the first matrix. The second matrix keeps a list (array) of booleans of the form [True,True,True,True], corresponding respectively to the possible states '.', '+', 'x', or 'o'. Once we got our 'empty' matrix it is time to pair it with the given stage, to do this we call the method populateMatrix (n,stage,matrix). This method will iterate both matrices, and call the subroutine refreshMatrix (matrix, row_index, column_index, style) for every model on the stage. The latest method will, update the entire estimation matrix according to the set of rules given on the Fashion Challenge. Note that estimations must be updated from the coordinates of insertion of a model taking into account rows, columns and diagonal lines (which I separated in four different quadrants).
-Once we got the stage and the matrix with all possible states, we called the method optimizeStage (n, stage, matrix). This method will go through the stage and now updated matrix, and try to place new models in every open position available that it finds. Obviously, every new model that is inserted must call for the refreshMatrix() method in order to update the estimations. This method conveniently returns the number of insertions that occurred. The final method getPoints (stage) calculates the total points on the stage following the specifications of the challenge. Due to the intrinsic complexity of this challenge, I had to implement methods for printing both matrices, these methods are not part of the final solution but aid me on the resolution of the challenge.
-Once we got the stage and the matrix with all possible states, we called the method optimizeStage (n, stage, matrix). This method will go through the stage and now updated matrix, and try to place new models in every open position available that it finds. Obviously, every new model that is inserted must call for the refreshMatrix() method in order to update the estimations. This method conveniently returns the number of insertions that occurred. The final method getPoints (stage) calculates the total points on the stage following the specifications of the challenge. Due to the intrinsic complexity of this challenge, I had to implement methods for printing both matrices, these methods are not part of the final solution but aid me on the resolution of the challenge.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <br>
 <br>
 <a href="#top">Back to Top</a> 
 <br>
--->
+
 <hr>
 <h3 id="help">Instructions to run the programs</h3>
 -Clone or download this repository<br>
