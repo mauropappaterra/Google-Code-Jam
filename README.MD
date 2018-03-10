@@ -5,7 +5,7 @@ This is a collection of my solutions to various challenges from <a href="https:/
 <b>All challenges are sorted by year of publication. You can find a description of each challenge and solution, as well as instruction to execute the programs on each folder.</b>
 <br>
 
-Jump to folder:<br>
+Jump to folder:
 <!-- <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2018">2018</a><br> -->
 <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2017">2017</a><br>
 <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2016">2016</a><br>
