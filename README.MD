@@ -11,9 +11,8 @@ Jump to folder:<br>
 <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2017">2017</a><br>
 <!-- <a href="https://github.com/yogurt1989/Google-Code-Jam/tree/master/2018">2018</a><br> -->
 <br>
-
 Related:<br>
-<a href="https://github.com/yogurt1989/Google-Hash-Code/tree/master">Google Hash Code</a><br>
+Check out my <a href="https://github.com/yogurt1989/Google-Hash-Code/tree/master">Google Hash Code</a> submissions<br>
 <br>
 
 <pre>
