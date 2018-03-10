@@ -61,12 +61,12 @@ no_samples = samples[0] # save the first line of the file containing the number 
 del samples[0] # deletes the first line of the file, leaving only the samples
 
 # PRINT OUTPUT OR SAVE TO EXTERNAL FILE
-path = path.replace("Input","Output")
-output = open(path, "+w")
+#path = path.replace("Input","Output")
+#output = open(path, "+w")
 for i, sample in enumerate (samples):
-    #print("Case #" + str(i + 1) + ": " + standingOvation(samples[i]))
-    output.write("Case #" + str(i + 1) + ": " + standingOvation(samples[i]) + "\n")
-output.close()
+    print("Case #" + str(i + 1) + ": " + standingOvation(samples[i]))
+    #output.write("Case #" + str(i + 1) + ": " + standingOvation(samples[i]) + "\n")
+#output.close()
 
 #FOR TESTING PURPOSES
 #print(standingOvation("6 0080104"))
