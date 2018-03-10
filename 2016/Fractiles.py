@@ -14,10 +14,9 @@ def fractiles (sample):
     S = int(sample[2]) # students: number of tiles that can be turned over
 
 
-    if (S == K): #
+    if (S == K): # save some time discarding sequences we can see entirely
         i = 1
         results = ""
-
         while (i <= K):
             results += str(i) + " "
             i += 1
