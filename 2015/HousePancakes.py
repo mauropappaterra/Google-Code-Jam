@@ -10,6 +10,14 @@ def housePancakes (diners):
     layout = [int(number) for number in diners[1:]]
     timers = [max(layout)]
 
+    if (len(layout) >= max(layout)): # TIME SAVER: if the length of the layout is larger than the largest number, wait for countdown
+        return str(max(layout))
+
+    if (max(layout) < 1000): # TIME SAVER: implement a pivot that is proportional to the largest number
+        pivot = 3  # pivot = smallest number to break
+    else:
+        pivot = max(layout) / 5 # special case for big numbers (n >= 100)
+
     # FOR TESTING PURPOSES
     #print(diners)
     #print("\nD: " + str(D))
@@ -21,9 +29,9 @@ def housePancakes (diners):
     #print("current layout: " + str(layout))
     #print("updated timers: " + str(timers))
 
-    while (not checkFinish(layout)):
+    while (not checkFinish(layout, pivot)):
 
-        if (max(layout) > 3):
+        if (max(layout) > pivot):
             minutes += 1
             index = returnMaxIndex(layout, max(layout))
 
@@ -50,16 +58,15 @@ def returnMaxIndex(layout, maxi):
             return index
     return -1
 
-def checkFinish (layout):
+def checkFinish (layout, pivot):
     for plate in layout:
-        if (plate > 3):
+        if (plate > pivot):
             return False
     return True
 
-
 #PATH TO EXAMPLES, HARDCODED
-path = "Input\House Pancakes\B-small-practice.in"
-#path = "Input\House Pancakes\B-large-practice.in"
+#path = "Input\House Pancakes\B-small-practice.in"
+path = "Input\House Pancakes\B-large-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
@@ -99,3 +106,5 @@ for i, sample in enumerate (formatted_samples):
 #print (housePancakes("2 6 6"))
 #print (housePancakes("1 20"))
 #print (housePancakes("4 4 4 4 4"))
+
+#print (housePancakes("10 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000"))
