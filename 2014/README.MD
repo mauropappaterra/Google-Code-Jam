@@ -10,7 +10,9 @@
 
 <h1>Google Code Jam 2014</h1>
 List of Solved Challenges<br>
-<a href="#ovation">-Magic Trick</a><br>
+<a href="#magic">-Magic Trick</a><br>
+<a href="#cookie">-Cookie Clicker Alpha</a><br>
+
 
 <br>
 More <br>
@@ -19,7 +21,7 @@ More <br>
 <br>
 
 <hr>
-<h3 id="ovation"> Magic Trick</h3>
+<h3 id="magic">Magic Trick</h3>
 <i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p0"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
 <i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2014/MagicTrick.py" target="_blank"><b>MagicTrick.py</b></a> <br>
 <h4>My Solution</h4>
@@ -31,9 +33,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <br>
 
 <hr>
-<h3 id="pancake">Infinite House of Pancakes</h3>
+<h3 id="cookie">Cookie Clicker Alpha</h3>
 <i>The challenge <a href="https://code.google.com/codejam/contest/3264486/dashboard#s=p1"><b>Click here to read the full challenge at Google's Code Jam website</b></a></i> <br>
-<i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2015/HousePancakes.py" target="_blank"><b>HousePancakes.py</b></a> <br>
+<i>Solution Script </i> <a href="https://github.com/yogurt1989/Google-Code-Jam/blob/master/2014/CookieClicker.py" target="_blank"><b>CookieClicker.py</b></a> <br>
 <h4>My Solution</h4>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <br>
