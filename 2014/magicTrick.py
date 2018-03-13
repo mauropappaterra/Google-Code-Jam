@@ -69,10 +69,10 @@ while (j < no_samples):
     j+=1
 
 # PRINT OUTPUT OR SAVE TO EXTERNAL FILE
-path = path.replace("Input","Output")
-output = open(path, "+w")
+#path = path.replace("Input","Output")
+#output = open(path, "+w")
 for i, sample in enumerate (formatted_samples):
-    #print("Case #" + str(i + 1) + ": " + magicTrick(sample))
-    output.write("Case #" + str(i + 1) + ": " + magicTrick(sample) + "\n")
-output.close()
+    print("Case #" + str(i + 1) + ": " + magicTrick(sample))
+    #output.write("Case #" + str(i + 1) + ": " + magicTrick(sample) + "\n")
+#output.close()
 
