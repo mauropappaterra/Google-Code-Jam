@@ -16,26 +16,31 @@ def cookieClicker (sample):
     cookies = 0.0 # no. of cookies
     production = 2.0 # cookie production per second
 
-    factories = 0
+    factories = 0 # keep track of factories
 
     while (True):
         time += 1
-        cookies += production
+        cookies += production + (factories * F)
 
         if (cookies >= C ):
 
-            if (factory_strategy(C, F, X, cookies, production)): # check if it's worth it to buy a cookie farm
+            if (factory_strategy(C, F, X, cookies, production, factories)): # check if it's worth it to buy a cookie farm
                 # buy a cookie farm
                 cookies -= C # deduct cookies
-                production += F # update production per second
-                factories += 1
+                factories += 1 # add factory
             else: # calculate remaining time needed, add time and exit
                 missing_cookies = X - cookies
-                missing_time = missing_cookies / production
+                missing_time = missing_cookies / production + (factories * F)
 
                 time += missing_time
                 cookies += missing_cookies
                 break # exit
+        else:
+            # TIME SAVER: add up necessary cookies to be able to buy a factory on next iteration
+            missing_cookies = C - cookies - 1
+            missing_time = missing_cookies / production + (factories * F)
+            time += missing_time
+            cookies += missing_cookies
 
         if (cookies >= X):
             break
@@ -44,12 +49,12 @@ def cookieClicker (sample):
     #print("You won! Total Time " + str(time) +" Cookies: " + str(cookies) + " Factories: " + str(factories))
     return str(time)
 
-def factory_strategy (C, F, X, cookies, production):
+def factory_strategy (C, F, X, cookies, production, factories):
     "Returns True if it is worth it to buy a factory"
 
     costInSeconds = C/F #seconds needed to buy a farm
-    timeWithoutFactory = (X-cookies) / production
-    timeWithNewFactory = (X / (production + F))
+    timeWithoutFactory = (X-cookies) / (production + (factories * F))
+    timeWithNewFactory = (X / (production + ((factories + 1) * F)))
 
     if (timeWithoutFactory < timeWithNewFactory):
         return False
@@ -58,8 +63,8 @@ def factory_strategy (C, F, X, cookies, production):
 
 
 #PATH TO EXAMPLES, HARDCODED
-path = "Input\Cookie Clicker Alpha\B-small-practice.in"
-#path = "Input\Cookie Clicker Alpha\B-large-practice.in"
+#path = "Input\Cookie Clicker Alpha\B-small-practice.in"
+path = "Input\Cookie Clicker Alpha\B-large-practice.in"
 
 # ASK USER TO ENTER PATH TO EXAMPLE FILE ON THE COMMAND LINE
 #path = input("Enter path to file containing examples: ")
